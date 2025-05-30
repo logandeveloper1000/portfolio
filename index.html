@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabriel Logan Portfolio</title>
+  <link rel="stylesheet" href="./resources/css/styles.css" />
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+  </style>
+
+</head>
+<body>
+<div class="body_wrapper">
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo">Portfolio</div>
+
+    <!-- Burger Icon -->
+    <div class="burger" id="burger">&#9776;</div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#languages">Languages</a>
+    </nav>
+
+  </div>
+
+  <!-- Animated Line -->
+<!--   <div class="header-underline">
+    <div class="scroll-bar"></div>
+  </div> -->
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section" id ="hero">
+    <!-- <img src="./resources/img/gabriel-profile.jpg" alt="Gabriel Logan" class="hero-image"> -->
+    <h1 class="hero-name">Gabriel Logan</h1>
+    <div class="hero-icons">
+      <a href="mailto:logandeveloper1000@gmail.com" target="_blank" class="icon-button">
+        <ion-icon name="mail"></ion-icon>
+      </a>
+      <a href="https://github.com/logandeveloper1000" target="_blank" class="icon-button">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a href="https://www.linkedin.com/in/gabriel-logan-costa-developer/" target="_blank" class="icon-button">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="https://codepen.io/logandeveloper1000" target="_blank" class="icon-button">
+        <ion-icon name="logo-codepen"></ion-icon>
+      </a>
+      <a href="https://www.codewars.com/users/logandeveloper1000" target="_blank" class="icon-button" onmouseover="codewarsHover()" onmouseout="codewarsOut()">
+        <div class="codewars-icon">
+          <img src="./resources/img/codewars-green.svg" alt="Portfolio" class="portfolio-icon" style="width: 100%;" id="codewars-img">
+        </div>
+      </a>
+      <a href="https://x.com/gabrielogann" target="_blank" class="icon-button">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="section-title">
+      <h2>About</h2>
+      <div class="underline"></div>
+    </div>
+    <p class="about-description">
+      As a web developer, I specialize in creating visually appealing and user-friendly websites. With a strong background in HTML, CSS, and JavaScript, I have the skills to design and develop websites that not only look great but also provide an intuitive and seamless user experience. I am experienced in various web development frameworks and technologies, such as React, Angular, and Node.js. I regularly work with RESTful APIs, including The Movie DB API, Open Trivia API, and PokeAPI, integrating real-time data into dynamic interfaces.<br><br>
+
+      My projects have utilized Firebase extensively for authentication, database management (Firestore), and hosting. I have built responsive, component-based web applications using React, React Router, and TailwindCSS, as well as deployed production-ready builds via Netlify and Firebase Hosting. From streaming service clones like Netflix, Hulu, and Realtor.com to static UI recreations of platforms like Google, Gmail, and Twitter, I focus on crafting polished, functional front-end experiences.<br><br>
+
+      I am also skilled in using Vite for rapid front-end development, Axios for API handling, and tools like Figma and Bootstrap for UI/UX design. My ability to design for both desktop and mobile platforms ensures a consistent experience across all devices. I also have experience with TypeScript, JSON, Google Firebase, AWS, React JS, React Native, Angular JS, UI / UX Design, Figma, Bootstrap, and Google Cloud Platform. Whether you need a simple static website or a complex full-stack web application, I am dedicated to bringing your vision to life and delivering a high-quality, professional online presence.
+    </p>
+
+<!--     <div class="about-stats">
+      <div class="stat-card">
+        <div class="icon">
+          <ion-icon name="code"></ion-icon>
+        </div>
+        <h3 class="count" data-target="18">0</h3>
+        <p>Projects</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon">
+          <ion-icon name="reader"></ion-icon>
+        </div>
+        <h3 class="count" data-target="6">0</h3>
+        <p>Certificates</p>
+      </div>
+      <div class="stat-card">
+        <div class="icon">
+          <ion-icon name="cellular"></ion-icon>
+        </div>
+        <h3 class="count" data-target="13">0</h3>
+        <p>Skills</p>
+      </div>
+    </div> -->
+
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="section-title">
+      <h2>Services</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" onclick="openServiceModal('Full Stack Developer', 'A full stack developer is a software developer who is skilled in both front-end and back-end development. This means they can build the parts of a website or application that users interact with like layouts, buttons, and forms, as well as the behind the scenes systems that process data, manage databases, and handle server logic. Full stack developers are versatile, able to work across the entire technology stack, and often use languages and tools like HTML, CSS, JavaScript, React, Node.js, Python, SQL, and more. Their broad knowledge allows them to create complete, functional, and responsive web applications from start to finish.')">
+        <div class="icon">
+          <ion-icon name="desktop"></ion-icon>
+        </div>
+        <div class="line"></div>
+        <p>Full Stack Developer</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('UI / UX Design', 'A UI/UX designer is a professional who focuses on creating user-friendly and visually appealing digital experiences. UI User Interface design involves the look and feel of a product, how it appears to users through elements like buttons, colors, fonts, and layouts. UX User Experience design is about how the product works, ensuring it is easy to navigate, intuitive, and meets the needs of users. Together, UI/UX designers research user behavior, design wireframes and prototypes, and test interfaces to create engaging, effective, and seamless interactions between people and technology.')">
+        <div class="icon">
+          <ion-icon name="create"></ion-icon>
+        </div>
+        <div class="line"></div>
+        <p>UI / UX Design</p>
+      </div>
+      <div class="service-card" onclick="openServiceModal('Data Analytics', 'A data analyst is a professional who collects, processes, and interprets data to help businesses make informed decisions. They use tools like Excel, SQL, Python, and data visualization software to identify patterns, trends, and insights from large sets of information. Data analysts play a key role in improving strategies, optimizing performance, and solving problems by turning raw data into clear, actionable reports and dashboards that support decision-making across various industries.')">
+        <div class="icon">
+          <ion-icon name="analytics"></ion-icon>
+        </div>
+        <div class="line"></div>
+        <p>Data Analytics</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Modal -->
+  <div id="service-modal" class="modal">
+    <div class="modal-content">
+      <h2 id="service-modal-title">Service Title</h2>
+      <div class="underline modal-underline"></div>
+      <p id="service-modal-description">Service description goes here.</p>
+      <button id="close-service-modal" class="modal-button cancel-button">Close</button>
+    </div>
+  </div>
+
+ <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="card-grid" id="card-grid">
+      <span style="display: none;" id="cards-count">0</span>
+    </div>
+  </section>
+
+
+  <div class="button-container">
+    <button id="loadMoreBtn">Load More</button>
+  </div>
+
+  <!-- Project Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="Project Image" />
+      <h2 id="modal-title">Project Title</h2>
+      <p id="modal-description">Project description text goes here.</p>
+      <div id="modal-compatibility" class="modal-compatibility"></div>
+      <div id="modal-technologies" class="modal-technologies">
+        <hr>
+        <h3>Technologies</h3>
+        <div class="tech-scroll-row">
+          <!-- Tech icons inserted via JS -->
+        </div>
+        <div id="tech-description" class="tech-description"></div>
+      </div>
+
+      <div class="modal-buttons">
+        <a id="modal-link" href="#" target="_blank" class="modal-button">See Project</a>
+        <a id="modal-github" href="#" target="_blank" class="github-button">GitHub</a>
+      </div>
+      <div class="modal-buttons">
+        <button id="modal-cancel" class="modal-button cancel-button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications Section -->
+<section class="certifications-section" id="certifications">
+  <div class="section-title">
+    <h2>Certifications</h2>
+    <div class="underline"></div>
+  </div>
+  <div class="certifications-container">
+    <div class="certifications-row">
+      <a href="https://www.credential.net/6189f062-60e2-4c7e-bad6-619a1f03b813#acc.b6pgH2nm" target="_blank">
+        <img src="./resources/img/certificate-1.jpg" alt="Certification 1" class="cert-image" />
+      </a>
+      <a href="https://www.credential.net/be8159e9-0da3-437e-a502-ed742ced817e#acc.yEhgTUMY" target="_blank">
+        <img src="./resources/img/certificate-2.jpg" alt="Certification 2" class="cert-image" />
+      </a>
+      <a href="https://www.credential.net/486db69c-3db9-4360-b3ab-ee35b6e2d745#acc.67SXOPvV" target="_blank">
+        <img src="./resources/img/certificate-3.jpg" alt="Certification 3" class="cert-image" />
+      </a>
+      <a href="https://www.credential.net/ead430b4-5d4c-4706-9bc5-61a6e619eafe#acc.ragJM4Hy" target="_blank">
+        <img src="./resources/img/certificate-4.png" alt="Certification 4" class="cert-image" />
+      </a>
+      <a href="https://www.credential.net/15850ccd-f4aa-48ed-8856-fa656830563c#acc.J7c5DZSP" target="_blank">
+        <img src="./resources/img/certificate-5.png" alt="Certification 5" class="cert-image" />
+      </a>
+      <a href="https://www.credential.net/1e48f27c-76a8-40f6-a251-23ac9d29333b#acc.jToxRLvK" target="_blank">
+        <img src="./resources/img/certificate-6.png" alt="Certification 6" class="cert-image" />
+      </a>
+      <!-- Add more here as needed -->
+    </div>
+  </div>
+</section>
+
+
+  <!-- Business Section -->
+<!--   <section class="business-section" id="business">
+    <div class="section-title">
+      <h2>Business</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="business-container">
+      <img src="./resources/img/logo-connectionwebsites-370x400.jpg" alt="Business" class="business-image">
+      <div class="business-content">
+        <h3 class="business-subtitle">Connection Websites</h3>
+        <p class="business-description">
+          Connection Websites is a tech company based in Orlando, Florida, specializing in web and mobile app development, UI/UX design, AI integration, 3D modeling, and virtual reality. They create custom digital solutions tailored to each client needs, focusing on innovation, user experience, and business growth.
+        </p>
+        <a href="https://connectionwebsites.com" target="_blank" class="business-button">See Website</a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <div class="section-title">
+      <h2>My Skills</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skill">
+        <span>HTML5</span>
+        <span class="skill-percentage">95%</span>
+        <div class="skill-bar"><div class="bar" data-percent="95%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <span class="skill-percentage">87%</span>
+        <div class="skill-bar"><div class="bar" data-percent="87%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS3</span>
+        <span class="skill-percentage">85%</span>
+        <div class="skill-bar"><div class="bar" data-percent="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>React JS</span>
+        <span class="skill-percentage">80%</span>
+        <div class="skill-bar"><div class="bar" data-percent="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>React Native</span>
+        <span class="skill-percentage">70%</span>
+        <div class="skill-bar"><div class="bar" data-percent="70%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <span class="skill-percentage">75%</span>
+        <div class="skill-bar"><div class="bar" data-percent="75%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Angular JS</span>
+        <span class="skill-percentage">65%</span>
+        <div class="skill-bar"><div class="bar" data-percent="65%"></div></div>
+      </div>
+      <div class="skill">
+        <span>AWS</span>
+        <span class="skill-percentage">80%</span>
+        <div class="skill-bar"><div class="bar" data-percent="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Google Analytics</span>
+        <span class="skill-percentage">85%</span>
+        <div class="skill-bar"><div class="bar" data-percent="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Firebase</span>
+        <span class="skill-percentage">90%</span>
+        <div class="skill-bar"><div class="bar" data-percent="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Node JS</span>
+        <span class="skill-percentage">70%</span>
+        <div class="skill-bar"><div class="bar" data-percent="70%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Git / GitHub</span>
+        <span class="skill-percentage">80%</span>
+        <div class="skill-bar"><div class="bar" data-percent="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>UI / UX Design</span>
+        <span class="skill-percentage">95%</span>
+        <div class="skill-bar"><div class="bar" data-percent="95%"></div></div>
+      </div>
+      <div class="skill">
+        <span>3D Modeling</span>
+        <span class="skill-percentage">90%</span>
+        <div class="skill-bar"><div class="bar" data-percent="90%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+<section class="languages-section" id="languages">
+  <div class="section-title">
+    <h2>Languages</h2>
+    <div class="underline"></div>
+  </div>
+  <div class="languages-container">
+    <div class="language">
+      <span>English</span>
+      <span class="language-percentage">85%</span>
+      <div class="language-bar"><div class="bar" data-percent="85%"></div></div>
+    </div>
+    <div class="language">
+      <span>Portuguese</span>
+      <span class="language-percentage">97%</span>
+      <div class="language-bar"><div class="bar" data-percent="97%"></div></div>
+    </div>
+    <div class="language">
+      <span>Spanish</span>
+      <span class="language-percentage">65%</span>
+      <div class="language-bar"><div class="bar" data-percent="65%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <hr />
+  <p>© 2022 Gabriel Logan - All Rights Reserved</p>
+</footer>
+
+
+<!---------------- End of the wrapper ---------------->
+</div>
+  <script src="./resources/js/script.js"></script>
+</body>
+</html>
