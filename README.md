@@ -37,7 +37,7 @@ A preview of the portfolio can be found by opening one of the project images (e.
 ## Live Demo
 
 View the live portfolio at:  
-[https://gabriel-logan.netlify.app/](https://gabriel-logan.netlify.app/)
+[https://prtf-gabriel-logan.netlify.app/](https://prtf-gabriel-logan.netlify.app/)
 
 ## License
 
