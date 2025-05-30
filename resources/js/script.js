@@ -96,7 +96,7 @@ const cardData = {
     shortDescription: "A real-time one-on-one chat app built with React and Firebase.",
     longDescription: "Chat App is a real-time messaging platform that allows authenticated users to start one-on-one conversations with others using their email addresses. Built with React for the frontend and Firebase for authentication and Firestore database, the app features user login/signup, a dashboard for managing chats, unread message alerts, and protected routes. It is fully responsive and deployed on Netlify.",
     compatibility: "Mobile Tablet Desktop",
-    link: "https://logan-chat-app.netlify.app/",
+    link: "https://userchat-app.netlify.app/",
     github: "https://github.com/logandeveloper1000/chat-app",
     technologies: [
       technologiesList.html5,
