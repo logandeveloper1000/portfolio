@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 10;
+const totalCards = 12;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -89,8 +89,25 @@ const technologiesList = {
 };
 
 const cardData = {
-  
-  1: {
+
+  12: {
+    title: "Connection Accounting",
+    imageSrc: "./resources/img/projects/connection-accounting.png",
+    shortDescription: "A multilingual accounting web app built with React and Firebase.",
+    longDescription: "Connection Accounting is a multilingual accounting web app designed for small business owners to track income, expenses, and account balances. Built with React and Firebase, it features secure authentication, real-time transaction management, profit & loss reporting, and interactive data visualization with Chart.js. The app supports English, Spanish, and Portuguese, and includes protected user routes, responsive design, and a customizable dashboard experience.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://connectionaccounting.netlify.app/",
+    github: "",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.react,
+      technologiesList.reactrouter,
+      technologiesList.firebase
+    ]
+  },
+  11: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A real-time one-on-one chat app built with React and Firebase.",
@@ -107,9 +124,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  ////////////DONE
-
-  2: {
+  10: {
     title: "Notes App",
     imageSrc: "./resources/img/projects/notes-app.png",
     shortDescription: "A note-taking web app built with React and Firebase that allows users to write and upload notes, which automatically expire after 24 hours.",
@@ -125,7 +140,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  3: {
+  9: {
     title: "Pokemon Finder",
     imageSrc: "./resources/img/projects/pokemon-finder.png",
     shortDescription: "Pokémon Finder is a web app that lets users search for Pokémon by name or ID. Built with HTML, CSS, and JavaScript, it fetches data from the PokeAPI and displays the Pokémon's image, name, and types in a responsive interface.",
@@ -140,7 +155,7 @@ const cardData = {
       technologiesList.pokeapi
     ]
   },
-  4: {
+  8: {
     title: "To Do App",
     imageSrc: "./resources/img/projects/to-do-app.png",
     shortDescription: "A responsive React and Firebase-based To-Do List app with real-time sync, user authentication, and task management.",
@@ -157,7 +172,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  5: {
+  7: {
     title: "Mini Store App",
     imageSrc: "./resources/img/projects/mini-store-app.png",
     shortDescription: "A mini e-commerce app built with React and Firebase, featuring user authentication, product management, cart functionality, and real-time Firestore syncing.",
@@ -190,7 +205,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  7: {
+  5: {
     title: "Quiz App",
     imageSrc: "./resources/img/projects/quiz-app.png",
     shortDescription: "The Logan Quiz App is a fast and responsive quiz platform built with Vite and React. It fetches trivia questions from the Open Trivia Database API, lets users choose categories and difficulty, and provides instant feedback with a clean, styled UI.",
@@ -206,7 +221,7 @@ const cardData = {
       technologiesList.trivia
     ]
   },
-  8: {
+  4: {
     title: "FakeStore App",
     imageSrc: "./resources/img/projects/fakestore-app.png",
     shortDescription: "The FakeStore E-Commerce App is a React-based front-end project that interacts with the FakeStoreAPI to display and manage products. It features multi-page navigation, form handling, and a responsive UI built with React Bootstrap.",
@@ -226,7 +241,7 @@ const cardData = {
       technologiesList.reactbootstrap
     ]
   },
-  9: {
+  3: {
     title: "User Authentication",
     imageSrc: "./resources/img/projects/logan-user-authentication.png",
     shortDescription: "A responsive React authentication app with Firebase, featuring email/password and Google Sign-In, user dashboard, and account deletion.",
@@ -242,7 +257,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  10: {
+  2: {
     title: "Logan Sports Arena",
     imageSrc: "./resources/img/projects/logan-sports-arena.png",
     shortDescription: "The Logan Sports Arena Website is a responsive multi-page site built with HTML, CSS, and JavaScript. It features a mobile-friendly layout, event listings, a menu, contact form, and embedded Google Map for directions.",
@@ -256,7 +271,7 @@ const cardData = {
       technologiesList.js,
     ]
   },
-  11: {
+  1: {
     title: "E-Commerce Product Listing App",
     imageSrc: "./resources/img/projects/ecommerce-product-listing-app.png",
     shortDescription: "This is a React-based E-Commerce Product Listing App that displays and filters products by category. It features a clean, responsive layout built with vanilla CSS and is deployed using Vite and Netlify.",
@@ -273,7 +288,7 @@ const cardData = {
     ]
   },
   /////////////////////////////////////////
-  12: {
+/*   12: {
     title: "Realtor.com CLONE",
     imageSrc: "./resources/img/projects/realtor-clone.png",
     shortDescription: "This Realtor.com clone was built using React, JavaScript, CSS, and Firebase. It features property listings, user authentication, and dynamic routing, with Firebase handling backend and hosting.",
@@ -382,7 +397,7 @@ const cardData = {
       technologiesList.js,
       technologiesList.firebase
     ]
-  }
+  } */
 };
 
 // Function to generate one card's HTML
@@ -417,18 +432,24 @@ function generateCard(n) {
 
 
 // Load initial cards
+const allKeys = Object.keys(cardData)
+  .map(Number)
+  .sort((a, b) => b - a); // sort descending
+
 function loadCards(amount) {
-  for (let i = 0; i < amount && cardsLoaded < totalCards; i++) {
-    const cardsN = parseInt(document.getElementById('cards-count').innerText);
-    cardGrid.insertAdjacentHTML('beforeend', generateCard(cardsN + 1));
-    document.getElementById('cards-count').innerText = cardsN + 1;
-    cardsLoaded++;
+  for (let i = cardsLoaded; i < cardsLoaded + amount && i < allKeys.length; i++) {
+    const key = allKeys[i];
+    cardGrid.insertAdjacentHTML('beforeend', generateCard(key));
+    document.getElementById('cards-count').innerText = i + 1;
   }
 
-  if (cardsLoaded >= totalCards) {
+  cardsLoaded += amount;
+
+  if (cardsLoaded >= allKeys.length) {
     loadMoreBtn.style.display = 'none';
   }
 }
+
 
 // Initial load
 loadCards(cardsPerClick);
@@ -461,7 +482,14 @@ function openModal(cardNumber) {
     <p>${card.compatibility}</p>
   `;
   document.getElementById('modal-link').href = card.link;
-  document.getElementById('modal-github').href = card.github;
+  const githubBtn = document.getElementById('modal-github');
+  if (card.github && card.github.trim() !== "") {
+    githubBtn.href = card.github;
+    githubBtn.style.display = "inline-block";
+  } else {
+    githubBtn.style.display = "none";
+  }
+
   const techRow = document.querySelector('.tech-scroll-row');
   const techDescription = document.getElementById('tech-description');
   techRow.innerHTML = '';
