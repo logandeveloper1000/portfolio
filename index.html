@@ -8,7 +8,7 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -162,6 +162,16 @@
       <h2>Projects</h2>
       <div class="underline"></div>
     </div>
+    <div class="project-filter-bar">
+      <button id="filterBtn">Technologies &nbsp;<i class="fa fa-filter"></i></button>
+      <div id="filterOptions" class="filter-options hidden">
+        <!-- Options will be added by JavaScript -->
+      </div>
+      <div id="activeFilters" class="active-filters">
+        <!-- Selected tags appear here -->
+      </div>
+    </div>
+
     <div class="card-grid" id="card-grid">
       <span style="display: none;" id="cards-count">0</span>
     </div>

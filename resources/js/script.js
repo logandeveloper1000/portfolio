@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 12;
+const totalCards = 15;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -30,6 +30,11 @@ const technologiesList = {
     src: "./resources/img/reactjs.png",
     title: "React JS",
     description: "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It allows developers to create reusable UI components that efficiently update and render when data changes. React follows a component-based architecture, making code more modular, maintainable, and easier to scale.\n\nOne of Reacts key features is the virtual DOM, which improves performance by minimizing direct interactions with the real DOM. When the state of a component changes, React updates the virtual DOM first, compares it to the previous version, and then applies only the necessary changes to the actual DOM.\n\nReact uses JSX, a syntax extension that allows developers to write HTML-like code within JavaScript, making the code more readable and easier to work with. It also supports powerful concepts like props and state for managing data, and hooks for handling side effects and lifecycle events in functional components.\n\nReact can be used in combination with other tools and libraries such as React Router for navigation, Redux for state management, and Axios or Fetch for API calls. It is also commonly used with back-end services like Firebase or Node.js in full-stack development."
+  },
+  python: {
+    src: "./resources/img/python.png",
+    title: "Python",
+    description: "Python is a high-level, interpreted programming language known for its clear syntax and readability, making it an ideal choice for beginners and professionals alike. Created by Guido van Rossum and first released in 1991, Python emphasizes code simplicity and productivity, allowing developers to write fewer lines of code to accomplish tasks that would require more in other languages. One of Python is most powerful features is its extensive standard library and thriving ecosystem of third-party packages, which support a wide range of applications—from web development and data analysis to machine learning, automation, and software testing. Popular frameworks like Django and Flask enable rapid web development, while libraries such as NumPy, pandas, and TensorFlow make Python a leader in scientific computing and artificial intelligence. Python uses indentation to define code blocks, which encourages clean and consistent coding practices. It also supports multiple programming paradigms, including procedural, object-oriented, and functional programming. With its cross-platform compatibility and active community, Python continues to grow in popularity and plays a central role in modern software development, data science, and automation workflows."
   },
   firebase: {
     src: "./resources/img/firebase.png",
@@ -90,11 +95,11 @@ const technologiesList = {
 
 const cardData = {
 
-  12: {
+  16: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
-    shortDescription: "A multilingual accounting web app built with React and Firebase.",
-    longDescription: "Connection Accounting is a multilingual accounting web app designed for small business owners to track income, expenses, and account balances. Built with React and Firebase, it features secure authentication, real-time transaction management, profit & loss reporting, and interactive data visualization with Chart.js. The app supports English, Spanish, and Portuguese, and includes protected user routes, responsive design, and a customizable dashboard experience.",
+    shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
+    longDescription: "Connection Accounting is a responsive, full-featured accounting web application designed to help small business owners manage their finances with ease. Built using React, Firebase (Auth & Firestore), and Chart.js, the app allows users to securely log in, add and categorize transactions, manage multiple bank accounts, and generate interactive financial reports. The app supports multilingual functionality (English, Spanish, and Portuguese) and provides a dynamic dashboard with visual insights through bar, pie, line, and doughnut charts. It includes features such as protected routes, modular UI components, and custom alert modals for user feedback. All user data is stored in Firestore and synced in real time. With its clean UI, role-based access control, and mobile-responsive layout, Connection Accounting offers a production-ready solution for personal or business financial management.",
     compatibility: "Mobile Tablet Desktop",
     link: "https://connectionaccounting.netlify.app/",
     github: "",
@@ -107,11 +112,11 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  11: {
+  15: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
-    shortDescription: "A real-time one-on-one chat app built with React and Firebase.",
-    longDescription: "Chat App is a real-time messaging platform that allows authenticated users to start one-on-one conversations with others using their email addresses. Built with React for the frontend and Firebase for authentication and Firestore database, the app features user login/signup, a dashboard for managing chats, unread message alerts, and protected routes. It is fully responsive and deployed on Netlify.",
+    shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
+    longDescription: "This project is a fully functional real-time chat application developed using React and Firebase. It allows users to register and log in securely using Firebase Authentication. Upon successful login, users are redirected to a dashboard where they can initiate chats with others by email and receive live updates thanks to Firestore is real-time data syncing. Each chat session includes key features such as typing indicators, presence detection, and read receipts. Messages are streamed live using Firestore is snapshot listeners, and the UI is responsive to changes like new messages or typing activity. Users receive visual alerts when there are unread messages, with a dropdown interface for easy access. The application employs route protection using custom components (PrivateRoute and AuthRedirectRoute), ensuring only authenticated users can access certain pages. It also features modular components like Navbar, ChatCard, and NewChatModal for a clean, maintainable architecture. With real-time functionality, responsive design, and clean user flow, this project showcases a modern, scalable messaging platform ideal for learning and demonstrating full-stack development with React and Firebase.",
     compatibility: "Mobile Tablet Desktop",
     link: "https://userchat-app.netlify.app/",
     github: "https://github.com/logandeveloper1000/chat-app",
@@ -124,7 +129,19 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  10: {
+  14: {
+    title: "Wizard Game",
+    imageSrc: "./resources/img/projects/wizard-game.png",
+    shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
+    longDescription: "Wizard Game is a terminal-based fantasy battle game built with Python that immerses players in a magical duel against an evil sorcerer. Players begin by selecting one of four unique hero classes: the resilient Warrior, the spell-slinging Mage, the agile Archer, or the holy Paladin. Each class offers distinct health levels, attack power, and two special abilities tailored to their combat style, including powerful offensive moves and strategic defensive skills like evasion, shields, or magical barriers. Throughout the game, players engage in turn-based combat, choosing between attacking, healing, or activating class-specific abilities to outlast the Evil Wizard, who regenerates health and strikes with dark magic. Defensive mechanics like shield blocks and mana shields add depth to the gameplay, requiring thoughtful decisions each turn. The game blends randomness with strategy, delivering a replayable experience that tests the player is adaptability and timing. With expressive text output and dynamic damage systems, Wizard Game is a fun and educational project that showcases object oriented programming, class inheritance, and game logic, all within a console interface.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/Wizard-Game",
+    technologies: [
+      technologiesList.python,
+    ]
+  },
+  13: {
     title: "Notes App",
     imageSrc: "./resources/img/projects/notes-app.png",
     shortDescription: "A note-taking web app built with React and Firebase that allows users to write and upload notes, which automatically expire after 24 hours.",
@@ -140,7 +157,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  9: {
+  12: {
     title: "Pokemon Finder",
     imageSrc: "./resources/img/projects/pokemon-finder.png",
     shortDescription: "Pokémon Finder is a web app that lets users search for Pokémon by name or ID. Built with HTML, CSS, and JavaScript, it fetches data from the PokeAPI and displays the Pokémon's image, name, and types in a responsive interface.",
@@ -155,7 +172,7 @@ const cardData = {
       technologiesList.pokeapi
     ]
   },
-  8: {
+  11: {
     title: "To Do App",
     imageSrc: "./resources/img/projects/to-do-app.png",
     shortDescription: "A responsive React and Firebase-based To-Do List app with real-time sync, user authentication, and task management.",
@@ -172,7 +189,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  7: {
+  10: {
     title: "Mini Store App",
     imageSrc: "./resources/img/projects/mini-store-app.png",
     shortDescription: "A mini e-commerce app built with React and Firebase, featuring user authentication, product management, cart functionality, and real-time Firestore syncing.",
@@ -188,7 +205,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  6: {
+  9: {
     title: "Blog Platform",
     imageSrc: "./resources/img/projects/blog-platform.png",
     shortDescription: "A modern blog platform built with React and Firebase, allowing users to create, manage, and publish posts with admin approval.",
@@ -205,7 +222,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  5: {
+  8: {
     title: "Quiz App",
     imageSrc: "./resources/img/projects/quiz-app.png",
     shortDescription: "The Logan Quiz App is a fast and responsive quiz platform built with Vite and React. It fetches trivia questions from the Open Trivia Database API, lets users choose categories and difficulty, and provides instant feedback with a clean, styled UI.",
@@ -221,7 +238,19 @@ const cardData = {
       technologiesList.trivia
     ]
   },
-  4: {
+  7: {
+    title: "To Do List",
+    imageSrc: "./resources/img/projects/todolist-python.png",
+    shortDescription: "A simple Python command-line To-Do List application that allows users to add, view, and delete tasks interactively. Built for practicing control flow, user input handling, and list manipulation.",
+    longDescription: "The To-Do List project is a beginner-friendly Python console application designed to help users manage daily tasks through a clean and intuitive menu interface. Users can add new tasks, view their current list, and delete completed or unwanted items by number. The program uses fundamental programming concepts such as loops, conditionals, functions, and list operations, making it an ideal practice project for newcomers to Python. With clear input prompts and validations, the application ensures a smooth user experience while also demonstrating how to structure a functional and interactive command-line tool. It is a great stepping stone toward more advanced task management applications with persistent storage or GUI interfaces.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/python-to-do-list-SE-Foundations-Module",
+    technologies: [
+      technologiesList.python,
+    ]
+  },
+  6: {
     title: "FakeStore App",
     imageSrc: "./resources/img/projects/fakestore-app.png",
     shortDescription: "The FakeStore E-Commerce App is a React-based front-end project that interacts with the FakeStoreAPI to display and manage products. It features multi-page navigation, form handling, and a responsive UI built with React Bootstrap.",
@@ -241,7 +270,7 @@ const cardData = {
       technologiesList.reactbootstrap
     ]
   },
-  3: {
+  5: {
     title: "User Authentication",
     imageSrc: "./resources/img/projects/logan-user-authentication.png",
     shortDescription: "A responsive React authentication app with Firebase, featuring email/password and Google Sign-In, user dashboard, and account deletion.",
@@ -255,6 +284,32 @@ const cardData = {
       technologiesList.js,
       technologiesList.react,
       technologiesList.firebase
+    ]
+  },
+  4: {
+    title: "Even or Odd Game",
+    imageSrc: "./resources/img/projects/even-odd.png",
+    shortDescription: "A simple Python project that demonstrates basic programming skills by checking if a number is even or odd, converting numbers to strings, and removing spaces from strings using clean and efficient functions.",
+    longDescription: "This Python project is a collection of three beginner-level functions designed to demonstrate foundational programming concepts. The first function checks whether a number is even or odd using a concise conditional expression, providing a clear example of how logical operators work in Python. The second function converts a numeric value into a string, showcasing the importance of data type conversion when handling input and output operations. The third function removes all spaces from a given string, highlighting how string manipulation can be achieved using built-in methods. Together, these functions offer a straightforward yet effective introduction to Python’s syntax and core capabilities, making the project ideal for anyone learning how to write clean, functional code. It emphasizes simplicity, readability, and real-world utility, serving as a practical exercise for beginners looking to strengthen their programming logic and confidence.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/Even-Odd",
+    technologies: [
+      technologiesList.python,
+    ]
+  },
+  3: {
+    title: "Software Engineer Portfolio",
+    imageSrc: "./resources/img/projects/portfolio-website.png",
+    shortDescription: "A modern, responsive software engineer portfolio built with HTML, CSS, JavaScript, and Bootstrap. Showcasing development skills, projects, testimonials, blog posts, and a contact form in a visually engaging format.",
+    longDescription: "The Software Engineer Portfolio is a fully responsive and professional portfolio website designed to highlight the skills, projects, and accomplishments of a modern web developer. Built using HTML5, CSS3, JavaScript, and Bootstrap 5, the site features a clean UI, smooth animations, and well-structured content sections to enhance user engagement. The homepage introduces the developer with a bold hero section, while the About section outlines core competencies such as front-end development, web applications, and UI/UX design best practices. A dynamic Skills Table displays proficiency levels in key technologies. Visitors can explore real client feedback in the Testimonials section, browse interactive Portfolio carousels, read tech-focused Blog Posts, and subscribe via the integrated Newsletter feature. The site also includes a functional Contact Form with input validation and modal-based feedback, allowing potential clients or collaborators to reach out easily. Enhancements like SEO and performance optimization services are featured to emphasize the developer is broader value. Additional highlights include an Achievements section with certificates and awards, a Service Offerings area, and custom JavaScript for modal popups and newsletter handling. This portfolio is designed not only to present technical skills but also to demonstrate attention to detail, user experience, and personal branding—all essential in today’s software development landscape.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://softwareengineer-portfolio.netlify.app/",
+    github: "https://github.com/logandeveloper1000/software-engineer-portfolio",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
     ]
   },
   2: {
@@ -481,7 +536,14 @@ function openModal(cardNumber) {
     <h3>Compatible</h3>
     <p>${card.compatibility}</p>
   `;
-  document.getElementById('modal-link').href = card.link;
+  const linkBtn = document.getElementById('modal-link');
+  if (card.link && card.link.trim() !== "") {
+    linkBtn.href = card.link;
+    linkBtn.style.display = "inline-block";
+  } else {
+    linkBtn.style.display = "none";
+  }
+  
   const githubBtn = document.getElementById('modal-github');
   if (card.github && card.github.trim() !== "") {
     githubBtn.href = card.github;
@@ -678,4 +740,71 @@ function codewarsHover(){
 }
 function codewarsOut(){
   document.getElementById('codewars-img').src = './resources/img/codewars-green.svg';
+}
+
+const allTechnologies = [
+  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap"
+];
+
+const filterBtn = document.getElementById("filterBtn");
+const filterOptions = document.getElementById("filterOptions");
+const activeFilters = document.getElementById("activeFilters");
+
+let selectedTechs = [];
+
+// Populate filter options
+allTechnologies.forEach(tech => {
+  const span = document.createElement("span");
+  span.textContent = tech;
+  span.addEventListener("click", () => toggleTech(tech));
+  filterOptions.appendChild(span);
+});
+
+filterBtn.addEventListener("click", () => {
+  filterOptions.classList.toggle("hidden");
+});
+
+function toggleTech(tech) {
+  if (!selectedTechs.includes(tech)) {
+    selectedTechs.push(tech);
+  } else {
+    selectedTechs = selectedTechs.filter(t => t !== tech);
+  }
+  renderActiveFilters();
+  filterProjectCards();
+}
+
+function renderActiveFilters() {
+  activeFilters.innerHTML = "";
+  selectedTechs.forEach(tech => {
+    const tag = document.createElement("span");
+    tag.textContent = tech;
+    tag.addEventListener("click", () => toggleTech(tech));
+    activeFilters.appendChild(tag);
+  });
+}
+
+function filterProjectCards() {
+  cardGrid.innerHTML = "";
+
+  const filteredKeys = allKeys.filter(key => {
+    const project = cardData[key];
+    if (!project.technologies) return false;
+
+    const techTitles = project.technologies.map(t => t.title);
+    return selectedTechs.every(selected => techTitles.includes(selected));
+  });
+
+  if (filteredKeys.length === 0 && selectedTechs.length > 0) {
+    cardGrid.innerHTML = `<p style="color:#ccc; text-align:center;">No projects match the selected filters.</p>`;
+    loadMoreBtn.style.display = "none";
+    return;
+  }
+
+  cardsLoaded = 0;
+  filteredKeys.forEach(key => {
+    cardGrid.insertAdjacentHTML("beforeend", generateCard(key));
+  });
+
+  loadMoreBtn.style.display = selectedTechs.length === 0 ? "block" : "none";
 }
