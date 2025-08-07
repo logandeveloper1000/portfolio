@@ -900,3 +900,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}

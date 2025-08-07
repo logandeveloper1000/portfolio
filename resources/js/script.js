@@ -505,7 +505,6 @@ function loadCards(amount) {
   }
 }
 
-
 // Initial load
 loadCards(cardsPerClick);
 
@@ -786,25 +785,35 @@ function renderActiveFilters() {
 
 function filterProjectCards() {
   cardGrid.innerHTML = "";
+  cardsLoaded = 0;
 
+  if (selectedTechs.length === 0) {
+    // No filters → Show all cards and hide Load More (show everything at once)
+    allKeys.forEach(key => {
+      cardGrid.insertAdjacentHTML("beforeend", generateCard(key));
+    });
+    loadMoreBtn.style.display = "none";
+    return;
+  }
+
+  // Filters active → Show only matching cards
   const filteredKeys = allKeys.filter(key => {
     const project = cardData[key];
     if (!project.technologies) return false;
-
     const techTitles = project.technologies.map(t => t.title);
     return selectedTechs.every(selected => techTitles.includes(selected));
   });
 
-  if (filteredKeys.length === 0 && selectedTechs.length > 0) {
+  if (filteredKeys.length === 0) {
     cardGrid.innerHTML = `<p style="color:#ccc; text-align:center;">No projects match the selected filters.</p>`;
     loadMoreBtn.style.display = "none";
     return;
   }
 
-  cardsLoaded = 0;
   filteredKeys.forEach(key => {
     cardGrid.insertAdjacentHTML("beforeend", generateCard(key));
   });
 
-  loadMoreBtn.style.display = selectedTechs.length === 0 ? "block" : "none";
+  loadMoreBtn.style.display = "none"; // Still show all matching results at once
 }
+
