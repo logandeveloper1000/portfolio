@@ -174,6 +174,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.api,
       technologiesList.pokeapi
     ]
   },
@@ -240,6 +241,7 @@ const cardData = {
       technologiesList.css3,  
       technologiesList.js,
       technologiesList.axios,
+      technologiesList.api,
       technologiesList.trivia
     ]
   },
@@ -296,6 +298,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.api,
       technologiesList.react,
       technologiesList.bootstrap,
       technologiesList.vite,
@@ -519,7 +522,6 @@ function generateCard(n) {
   `;
 }
 
-
 // Load initial cards
 const allKeys = Object.keys(cardData)
   .map(Number)
@@ -614,8 +616,6 @@ function openModal(cardNumber) {
   }
 
 }
-
-
 
 document.getElementById('modal-cancel').onclick = () => {
   const modal = document.getElementById('modal');
@@ -776,7 +776,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap"
+  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap"
 ];
 
 const filterBtn = document.getElementById("filterBtn");
