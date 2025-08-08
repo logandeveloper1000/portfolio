@@ -749,29 +749,46 @@ body {
 }
 
 .certifications-container {
-  overflow-x: auto;
-  scrollbar-color: #0f0 #111;
-  scrollbar-width: auto;
   padding: 10px 0;
+  overflow: hidden; /* no horizontal scroll */
+  display: flex;
+  justify-content: center; /* center the grid inside */
 }
 
-/* Force scrollbar to appear */
-.certifications-container::-webkit-scrollbar {
-  height: 10px;
+.certifications-row {
+  display: grid;
+  grid-template-columns: repeat(5, 200px); /* fixed width certificates */
+  gap: 20px;
+  justify-content: center; /* center grid items */
 }
 
-.certifications-container::-webkit-scrollbar-track {
-  background: #111;
+.cert-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.certifications-container::-webkit-scrollbar-thumb {
-  background: #0f0;
-  border-radius: 5px;
+.cert-image:hover {
+  transform: scale(1.05);
 }
 
-.certifications-container::-webkit-scrollbar-thumb:hover {
-  background: #0c0;
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .certifications-row {
+    grid-template-columns: repeat(3, 200px);
+  }
 }
+
+@media (max-width: 700px) {
+  .certifications-row {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
+
 
 .github-button {
   background-color: transparent;
