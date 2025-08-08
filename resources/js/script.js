@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 18;
+const totalCards = 19;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -14,7 +14,7 @@ const technologiesList = {
   html5: {
     src: "./resources/img/html5.png",
     title: "HTML5",
-    description: "HTML5 is the fifth and latest major version of the HyperText Markup Language, which is the standard language used to create and structure content on the web. It was developed to improve the way websites are built by introducing new elements and features that support modern multimedia, graphics, and interactive applications—all without the need for external plugins like Flash.\n\nOne of the key advancements in HTML5 is the addition of semantic elements such as <header>, <footer>, <article>, and <section>, which help developers write cleaner, more meaningful code that is easier to read and maintain. HTML5 also includes built-in support for audio and video through the <audio> and <video> tags, making it easier to embed media directly into web pages.\n\nIn addition, HTML5 enhances form controls, enables local storage through localStorage and sessionStorage, and improves compatibility across different browsers and devices. It plays a vital role in responsive design and mobile-friendly web development."
+    description: "HTML5 is the fifth and latest major version of the HyperText Markup Language, which is the standard language used to create and structure content on the web. It was developed to improve the way websites are built by introducing new elements and features that support modern multimedia, graphics, and interactive applications all without the need for external plugins like Flash.\n\nOne of the key advancements in HTML5 is the addition of semantic elements such as <header>, <footer>, <article>, and <section>, which help developers write cleaner, more meaningful code that is easier to read and maintain. HTML5 also includes built-in support for audio and video through the <audio> and <video> tags, making it easier to embed media directly into web pages.\n\nIn addition, HTML5 enhances form controls, enables local storage through localStorage and sessionStorage, and improves compatibility across different browsers and devices. It plays a vital role in responsive design and mobile-friendly web development."
   },
   css3: {
     src: "./resources/img/css3.png",
@@ -39,12 +39,12 @@ const technologiesList = {
   python: {
     src: "./resources/img/python.png",
     title: "Python",
-    description: "Python is a high-level, interpreted programming language known for its clear syntax and readability, making it an ideal choice for beginners and professionals alike. Created by Guido van Rossum and first released in 1991, Python emphasizes code simplicity and productivity, allowing developers to write fewer lines of code to accomplish tasks that would require more in other languages. One of Python is most powerful features is its extensive standard library and thriving ecosystem of third-party packages, which support a wide range of applications—from web development and data analysis to machine learning, automation, and software testing. Popular frameworks like Django and Flask enable rapid web development, while libraries such as NumPy, pandas, and TensorFlow make Python a leader in scientific computing and artificial intelligence. Python uses indentation to define code blocks, which encourages clean and consistent coding practices. It also supports multiple programming paradigms, including procedural, object-oriented, and functional programming. With its cross-platform compatibility and active community, Python continues to grow in popularity and plays a central role in modern software development, data science, and automation workflows."
+    description: "Python is a high-level, interpreted programming language known for its clear syntax and readability, making it an ideal choice for beginners and professionals alike. Created by Guido van Rossum and first released in 1991, Python emphasizes code simplicity and productivity, allowing developers to write fewer lines of code to accomplish tasks that would require more in other languages. One of Python is most powerful features is its extensive standard library and thriving ecosystem of third-party packages, which support a wide range of applications from web development and data analysis to machine learning, automation, and software testing. Popular frameworks like Django and Flask enable rapid web development, while libraries such as NumPy, pandas, and TensorFlow make Python a leader in scientific computing and artificial intelligence. Python uses indentation to define code blocks, which encourages clean and consistent coding practices. It also supports multiple programming paradigms, including procedural, object-oriented, and functional programming. With its cross-platform compatibility and active community, Python continues to grow in popularity and plays a central role in modern software development, data science, and automation workflows."
   },
   firebase: {
     src: "./resources/img/firebase.png",
     title: "Firebase",
-    description: "Firebase is a platform developed by Google that provides a suite of cloud-based tools and services to help developers build, improve, and grow web and mobile applications. It offers backend solutions such as authentication, real-time databases, hosting, cloud functions, analytics, and more—all without the need to manage traditional servers.\n\nOne of the core features of Firebase is Firebase Authentication, which allows developers to easily implement secure login systems using email/password, phone numbers, or third-party providers like Google, Facebook, and GitHub. Firebase Firestore, a flexible NoSQL cloud database, enables real-time data synchronization and offline support, making it ideal for responsive apps.\n\nFirebase Hosting is another powerful feature that provides fast and secure static web hosting with a global content delivery network (CDN). It supports custom domains, HTTPS by default, and easy deployment via the Firebase CLI. Additionally, Firebase Cloud Functions allow developers to write backend logic that runs in response to events, such as database changes or HTTP requests.\n\nFirebase integrates seamlessly with popular front-end frameworks like React, Vue, and Angular, and supports both mobile platforms (iOS and Android) and web development."
+    description: "Firebase is a platform developed by Google that provides a suite of cloud-based tools and services to help developers build, improve, and grow web and mobile applications. It offers backend solutions such as authentication, real-time databases, hosting, cloud functions, analytics, and more all without the need to manage traditional servers.\n\nOne of the core features of Firebase is Firebase Authentication, which allows developers to easily implement secure login systems using email/password, phone numbers, or third-party providers like Google, Facebook, and GitHub. Firebase Firestore, a flexible NoSQL cloud database, enables real-time data synchronization and offline support, making it ideal for responsive apps.\n\nFirebase Hosting is another powerful feature that provides fast and secure static web hosting with a global content delivery network (CDN). It supports custom domains, HTTPS by default, and easy deployment via the Firebase CLI. Additionally, Firebase Cloud Functions allow developers to write backend logic that runs in response to events, such as database changes or HTTP requests.\n\nFirebase integrates seamlessly with popular front-end frameworks like React, Vue, and Angular, and supports both mobile platforms (iOS and Android) and web development."
   },
   tailwind: {
     src: "./resources/img/tailwindcss.png",
@@ -95,12 +95,33 @@ const technologiesList = {
     src: "./resources/img/reactbootstrap.png",
     title: "React Bootstrap",
     description: "React Bootstrap is a front-end framework that rebuilds Bootstrap components using React. It provides ready-to-use UI components like modals, buttons, forms, and navbars, all fully integrated with React`s component-based architecture, making it easier to build responsive and interactive interfaces."
+  },
+  mysql: {
+    src: "./resources/img/mysql.png",
+    title: "MySQL",
+    description: "MySQL is an open-source relational database management system (RDBMS) that uses Structured Query Language (SQL) to store, organize, and manage data. It is widely used for building and maintaining databases in web applications, desktop software, and enterprise systems due to its reliability, scalability, and ease of use. Originally developed by MySQL AB and now owned by Oracle Corporation, MySQL follows a client server architecture where the database server processes requests from client applications. It supports features such as transactions, indexing, replication, and advanced security controls, making it suitable for both small projects and large-scale, high-traffic environments. MySQL is highly compatible with many programming languages and frameworks, including PHP, Python, Java, and Node.js, and it is often paired with web servers like Apache or Nginx in the popular LAMP (Linux, Apache, MySQL, PHP/Perl/Python) stack. Its ability to handle large amounts of data efficiently, combined with strong community support and frequent updates, has made MySQL one of the most popular database solutions in the world."
+  },
+  sqlalchemy: {
+    src: "./resources/img/sqlalchemy.png",
+    title: "SQLAlchemy",
+    description: "SQLAlchemy is a powerful and flexible Python library used for working with relational databases through both high-level and low-level interfaces. It provides an Object Relational Mapper (ORM) that allows developers to interact with databases using Python classes and objects instead of writing raw SQL, as well as a Core layer for writing SQL statements directly when finer control is needed. Designed to support multiple database backends such as MySQL, PostgreSQL, SQLite, and Oracle, SQLAlchemy acts as a bridge between Python code and the database, translating Pythonic commands into optimized SQL queries. It handles database connections, schema definitions, relationships between tables, and query execution, while also providing tools for transactions, migrations, and connection pooling. SQLAlchemy is widely used in both small and large projects because it combines the productivity of ORM with the power of direct SQL when required, giving developers the best of both worlds clean, maintainable code without sacrificing performance or flexibility."
+  },
+  flask: {
+    src: "./resources/img/flask.png",
+    title: "Flask",
+    description: "Flask is a lightweight and flexible Python web framework designed to help developers build web applications quickly and with minimal overhead. Known as a “microframework,” Flask provides the essential tools for routing, request handling, and template rendering, while leaving the choice of additional components such as database integration, authentication, or form handling up to the developer. Created by Armin Ronacher and released in 2010, Flask follows a simple, modular design that makes it easy to learn for beginners while remaining powerful enough for complex applications. It is built on top of the Werkzeug WSGI toolkit for request and response handling and uses the Jinja2 template engine for rendering dynamic HTML pages. Flask’s minimal core and extensive ecosystem of extensions allow developers to customize their applications to fit specific needs. Whether building a small API or a full-featured web platform, Flask’s simplicity, flexibility, and strong community support have made it one of the most popular Python frameworks for web development."
+  },
+  marshmallow: {
+    src: "./resources/img/marshmallow.png",
+    title: "Marshmallow",
+    description: "Marshmallow is a Python library used for object serialization, deserialization, and data validation. It allows developers to convert complex data types such as Python objects, dictionaries, and query results from ORMs into JSON, XML, or other formats for easy storage and transfer, and then back into Python objects when needed. One of Marshmallow’s core strengths is its built-in validation system, which ensures that incoming data meets specific requirements before it is processed or saved. Developers define schemas that describe the structure, types, and rules for their data, and Marshmallow automatically handles type conversion, field mapping, and error reporting. Marshmallow integrates seamlessly with popular ORMs like SQLAlchemy, making it a common choice for projects involving RESTful APIs. Its combination of simplicity, flexibility, and powerful validation tools makes it a go-to library for managing clean, consistent data in Python applications."
   }
 };
 
 const cardData = {
 
-  18: {
+
+  19: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -117,7 +138,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  17: {
+  18: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -134,7 +155,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  16: {
+  17: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -144,6 +165,22 @@ const cardData = {
     github: "https://github.com/logandeveloper1000/Wizard-Game",
     technologies: [
       technologiesList.python,
+    ]
+  },
+  16: {
+    title: "E-Commerce API MySQL",
+    imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
+    shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
+    longDescription: "This project is a fully functional e-commerce backend implemented in Python using Flask for routing, SQLAlchemy for ORM/database modeling, and Marshmallow for serialization and validation. The domain models cover three core resources User, Product, and Order with a normalized schema that includes a dedicated association table (order_product) to represent the many-to-many relationship between orders and products. A uniqueness constraint on (order_id, product_id) ensures that the same product is not added to the same order twice. The API follows RESTful conventions and returns concise, predictable JSON. Users and products support full CRUD operations, while orders provide creation, listing by user, and targeted helpers to add or remove products from an existing order. Input is validated at the edge via Marshmallow schemas: user emails must be valid and product prices must be non-negative; attempts to violate constraints return helpful, structured error messages. Global error handlers cover common cases (400/404/409) to keep responses consistent. Configuration is environment-driven with SQLALCHEMY_DATABASE_URI (defaulting to a local MySQL connection), and db.create_all() is provided both at startup and via an /initdb endpoint to bootstrap tables in a fresh environment. Relationship fields are exposed read-only on responses (e.g., products attached to an order) while write paths accept minimal, explicit inputs (e.g., user_id for order creation), keeping the API simple to integrate from clients such as Postman or frontend apps. Overall, the codebase demonstrates clean separation of concerns models, schemas, routes, and error handling resulting in an approachable, production-ready template for small e-commerce or order-management services.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/ecommerce-api-mysql",
+    technologies: [
+      technologiesList.python,
+      technologiesList.mysql,
+      technologiesList.sqlalchemy,
+      technologiesList.flask,
+      technologiesList.marshmallow,
     ]
   },
   15: {
@@ -339,7 +376,7 @@ const cardData = {
     title: "Software Engineer Portfolio",
     imageSrc: "./resources/img/projects/portfolio-website.png",
     shortDescription: "A modern, responsive software engineer portfolio built with HTML, CSS, JavaScript, and Bootstrap. Showcasing development skills, projects, testimonials, blog posts, and a contact form in a visually engaging format.",
-    longDescription: "The Software Engineer Portfolio is a fully responsive and professional portfolio website designed to highlight the skills, projects, and accomplishments of a modern web developer. Built using HTML5, CSS3, JavaScript, and Bootstrap 5, the site features a clean UI, smooth animations, and well-structured content sections to enhance user engagement. The homepage introduces the developer with a bold hero section, while the About section outlines core competencies such as front-end development, web applications, and UI/UX design best practices. A dynamic Skills Table displays proficiency levels in key technologies. Visitors can explore real client feedback in the Testimonials section, browse interactive Portfolio carousels, read tech-focused Blog Posts, and subscribe via the integrated Newsletter feature. The site also includes a functional Contact Form with input validation and modal-based feedback, allowing potential clients or collaborators to reach out easily. Enhancements like SEO and performance optimization services are featured to emphasize the developer is broader value. Additional highlights include an Achievements section with certificates and awards, a Service Offerings area, and custom JavaScript for modal popups and newsletter handling. This portfolio is designed not only to present technical skills but also to demonstrate attention to detail, user experience, and personal branding—all essential in today’s software development landscape.",
+    longDescription: "The Software Engineer Portfolio is a fully responsive and professional portfolio website designed to highlight the skills, projects, and accomplishments of a modern web developer. Built using HTML5, CSS3, JavaScript, and Bootstrap 5, the site features a clean UI, smooth animations, and well-structured content sections to enhance user engagement. The homepage introduces the developer with a bold hero section, while the About section outlines core competencies such as front-end development, web applications, and UI/UX design best practices. A dynamic Skills Table displays proficiency levels in key technologies. Visitors can explore real client feedback in the Testimonials section, browse interactive Portfolio carousels, read tech-focused Blog Posts, and subscribe via the integrated Newsletter feature. The site also includes a functional Contact Form with input validation and modal-based feedback, allowing potential clients or collaborators to reach out easily. Enhancements like SEO and performance optimization services are featured to emphasize the developer is broader value. Additional highlights include an Achievements section with certificates and awards, a Service Offerings area, and custom JavaScript for modal popups and newsletter handling. This portfolio is designed not only to present technical skills but also to demonstrate attention to detail, user experience, and personal branding all essential in today’s software development landscape.",
     compatibility: "Mobile Tablet Desktop",
     link: "https://softwareengineer-portfolio.netlify.app/",
     github: "https://github.com/logandeveloper1000/software-engineer-portfolio",
@@ -776,7 +813,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap"
+  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow "
 ];
 
 const filterBtn = document.getElementById("filterBtn");
