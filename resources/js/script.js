@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 15;
+const totalCards = 18;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -30,6 +30,11 @@ const technologiesList = {
     src: "./resources/img/reactjs.png",
     title: "React JS",
     description: "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It allows developers to create reusable UI components that efficiently update and render when data changes. React follows a component-based architecture, making code more modular, maintainable, and easier to scale.\n\nOne of Reacts key features is the virtual DOM, which improves performance by minimizing direct interactions with the real DOM. When the state of a component changes, React updates the virtual DOM first, compares it to the previous version, and then applies only the necessary changes to the actual DOM.\n\nReact uses JSX, a syntax extension that allows developers to write HTML-like code within JavaScript, making the code more readable and easier to work with. It also supports powerful concepts like props and state for managing data, and hooks for handling side effects and lifecycle events in functional components.\n\nReact can be used in combination with other tools and libraries such as React Router for navigation, Redux for state management, and Axios or Fetch for API calls. It is also commonly used with back-end services like Firebase or Node.js in full-stack development."
+  },
+  api: {
+    src: "./resources/img/api.png",
+    title: "API",
+    description: "An API (Application Programming Interface) is a structured set of rules, protocols, and tools that enable different software applications to communicate, exchange data, and use each other is functionalities without needing to understand the internal code or architecture behind them. It acts as an intermediary or bridge, defining the precise way in which a request should be made, the type and format of data to send, and how the resulting response should be delivered. This separation allows developers to integrate complex features and external services into their own applications more efficiently, focusing on building unique functionality while relying on existing, proven systems for other tasks. In essence, APIs provide a standardized way for programs to “speak the same language,” regardless of the technologies or programming languages they use. For example, a weather application on your phone might use a public weather API to retrieve current temperature and forecast data from a remote server, while a payment processing service might rely on a secure financial API to handle transactions. This interaction happens seamlessly, with the API ensuring that the request and response follow an agreed-upon format. By abstracting away the complexity of underlying systems, APIs make it possible to build software ecosystems where services, platforms, and applications are interconnected. They are fundamental to modern technology, powering integrations between mobile apps and cloud services, enabling websites to pull live data from external platforms, and allowing businesses to share capabilities with partners and customers. Whether in the form of web APIs, operating system APIs, or library APIs, they are the hidden framework that drives much of the interconnectivity and functionality we take for granted in today is digital world."
   },
   python: {
     src: "./resources/img/python.png",
@@ -95,7 +100,7 @@ const technologiesList = {
 
 const cardData = {
 
-  16: {
+  18: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -112,7 +117,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  15: {
+  17: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -129,7 +134,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  14: {
+  16: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -141,7 +146,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  13: {
+  15: {
     title: "Notes App",
     imageSrc: "./resources/img/projects/notes-app.png",
     shortDescription: "A note-taking web app built with React and Firebase that allows users to write and upload notes, which automatically expire after 24 hours.",
@@ -157,7 +162,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  12: {
+  14: {
     title: "Pokemon Finder",
     imageSrc: "./resources/img/projects/pokemon-finder.png",
     shortDescription: "Pokémon Finder is a web app that lets users search for Pokémon by name or ID. Built with HTML, CSS, and JavaScript, it fetches data from the PokeAPI and displays the Pokémon's image, name, and types in a responsive interface.",
@@ -172,7 +177,7 @@ const cardData = {
       technologiesList.pokeapi
     ]
   },
-  11: {
+  13: {
     title: "To Do App",
     imageSrc: "./resources/img/projects/to-do-app.png",
     shortDescription: "A responsive React and Firebase-based To-Do List app with real-time sync, user authentication, and task management.",
@@ -189,7 +194,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  10: {
+  12: {
     title: "Mini Store App",
     imageSrc: "./resources/img/projects/mini-store-app.png",
     shortDescription: "A mini e-commerce app built with React and Firebase, featuring user authentication, product management, cart functionality, and real-time Firestore syncing.",
@@ -205,7 +210,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  9: {
+  11: {
     title: "Blog Platform",
     imageSrc: "./resources/img/projects/blog-platform.png",
     shortDescription: "A modern blog platform built with React and Firebase, allowing users to create, manage, and publish posts with admin approval.",
@@ -222,7 +227,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  8: {
+  10: {
     title: "Quiz App",
     imageSrc: "./resources/img/projects/quiz-app.png",
     shortDescription: "The Logan Quiz App is a fast and responsive quiz platform built with Vite and React. It fetches trivia questions from the Open Trivia Database API, lets users choose categories and difficulty, and provides instant feedback with a clean, styled UI.",
@@ -238,7 +243,7 @@ const cardData = {
       technologiesList.trivia
     ]
   },
-  7: {
+  9: {
     title: "To Do List",
     imageSrc: "./resources/img/projects/todolist-python.png",
     shortDescription: "A simple Python command-line To-Do List application that allows users to add, view, and delete tasks interactively. Built for practicing control flow, user input handling, and list manipulation.",
@@ -248,6 +253,35 @@ const cardData = {
     github: "https://github.com/logandeveloper1000/python-to-do-list-SE-Foundations-Module",
     technologies: [
       technologiesList.python,
+    ]
+  },
+  8: {
+    title: "Dash Connect",
+    imageSrc: "./resources/img/projects/dash-connect.png",
+    shortDescription: "Dash Connect is an interactive JavaScript-powered API dashboard that connects to multiple public APIs, allowing users to instantly fetch and display live data such as random dog and cat images, current weather, currency exchange rates, trending movies, GitHub profiles, and public advice.",
+    longDescription: "Dash Connect is a dynamic, browser-based API dashboard designed to showcase the power of JavaScript is fetch() and asynchronous programming. The application integrates with multiple public APIs, giving users instant access to diverse, real-time information, from fetching random dog and cat images, to viewing live weather updates, checking currency exchange rates, exploring trending movies, discovering GitHub user profiles, and receiving pieces of public advice. Each feature is encapsulated in its own section with an intuitive button, allowing users to retrieve fresh data with a single click. Built with clean HTML, CSS, and JavaScript, Dash Connect emphasizes responsive design, clear data presentation, and practical examples of API consumption, making it both a fun interactive tool and a strong demonstration of front-end development skills.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://dash-connect.netlify.app/",
+    github: "https://github.com/logandeveloper1000/DashConnect",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.api,
+    ]
+  },
+  7: {
+    title: "Code Quest",
+    imageSrc: "./resources/img/projects/code-quest.png",
+    shortDescription: "Code Quest is a lightweight JavaScript quiz that teaches core JS concepts through quick, interactive questions. It features instant answer feedback, locked options after selection, dynamic “Next/Show Results” flow, final score display, and a one click restart all built with vanilla HTML, CSS, and JavaScript.",
+    longDescription: "Code Quest is a browser-based JavaScript quiz designed to sharpen fundamentals through a clean, distraction-free experience. Built with vanilla HTML, CSS, and JavaScript, it renders questions dynamically, disables answers after a choice is made, and highlights correctness immediately (green for right, red for wrong) to reinforce learning on the spot. The UI keeps users on track by disabling the “Next Question” button until an option is selected and automatically switching the CTA to “Show Results” on the final prompt. After completing the quiz, users see a concise score summary (e.g., 7/10) and can restart instantly to practice again. Under the hood, the app demonstrates practical DOM manipulation, event handling, and simple state management (current index, score), making it a tidy example of building interactive learning tools without any frameworks.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://cd-quiz-app.netlify.app/",
+    github: "https://github.com/logandeveloper1000/CodeQuest",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
     ]
   },
   6: {
