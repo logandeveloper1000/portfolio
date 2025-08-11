@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 19;
+const totalCards = 20;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -25,6 +25,11 @@ const technologiesList = {
     src: "./resources/img/js.png",
     title: "JavaScript",
     description: "JavaScript is a high-level, interpreted programming language that is widely used to create dynamic and interactive content on websites. It is a core technology of the web, alongside HTML and CSS, and enables developers to build engaging user experiences by allowing real-time updates, form validations, interactive elements, and much more.\n\nOriginally developed for client-side scripting in web browsers, JavaScript has evolved into a powerful, full-featured language that can also be used on the server side through platforms like Node.js. It supports object-oriented, functional, and event-driven programming paradigms, making it highly versatile and suitable for a wide range of applications.\n\nModern JavaScript includes features such as ES6+ syntax improvements, modules, promises, async/await, arrow functions, and classes, which make the code more readable, maintainable, and efficient. It also integrates seamlessly with APIs, databases, and other technologies to build full-stack web applications."
+  },
+  typescript: {
+    src: "./resources/img/typescript.png",
+    title: "TypeScript",
+    description: "TypeScript is an open-source programming language developed by Microsoft that builds on JavaScript by adding optional static typing. It allows developers to define the types of variables, function parameters, return values, and objects, which helps catch errors during development rather than at runtime. TypeScript also supports modern JavaScript features (ES6 and beyond) and compiles down to plain JavaScript, ensuring compatibility with any browser, host, or operating system. By introducing features like interfaces, enums, generics, and advanced type inference, TypeScript enhances code readability, maintainability, and scalability, making it especially popular for large, complex applications. Its tooling support such as intelligent autocompletion, refactoring, and type checking further improves developer productivity."
   },
   react: {
     src: "./resources/img/reactjs.png",
@@ -120,7 +125,23 @@ const technologiesList = {
 
 const cardData = {
 
-
+  20: {
+    title: "Task Management",
+    imageSrc: "./resources/img/projects/task-management.png",
+    shortDescription: "Task Management is a modern web application built with TypeScript and React that enables users to create, edit, and organize their tasks with ease. Featuring due date tracking, completion status, and an intuitive interface, it’s designed to keep productivity simple and effective.",
+    longDescription: "Task Management is a full-featured, responsive web application developed with TypeScript and React, offering a streamlined way to organize and track daily tasks. Users can easily create new tasks, add detailed descriptions, set due dates, and mark items as completed. The platform also allows editing and deleting tasks, ensuring complete control over one’s workflow. With a clean, minimal interface and structured state management, Task Management delivers an intuitive and efficient user experience. Authentication ensures secure access, and deployment on Netlify makes the application accessible from any device, anywhere. Whether for personal to-do lists or professional project planning, Task Management is designed to boost productivity and keep tasks organized in a simple, user-friendly way.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://task-management-typescript.netlify.app/",
+    github: "https://github.com/logandeveloper1000/Task-Management",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.typescript,
+      technologiesList.react,
+      technologiesList.reactrouter,
+      technologiesList.api
+    ]
+  },
   19: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
@@ -813,7 +834,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "React JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow"
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow"
 ];
 
 const filterBtn = document.getElementById("filterBtn");
