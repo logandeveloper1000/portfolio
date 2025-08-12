@@ -147,6 +147,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.nodejs,
       technologiesList.react,
       technologiesList.reactrouter,
       technologiesList.firebase
@@ -163,6 +164,7 @@ const cardData = {
     technologies: [
       technologiesList.html5,
       technologiesList.css3,
+      technologiesList.nodejs,
       technologiesList.js,
       technologiesList.react,
       technologiesList.reactrouter,
@@ -248,6 +250,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.nodejs,
       technologiesList.react,
       technologiesList.firebase
     ]
@@ -280,6 +283,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.nodejs,
       technologiesList.react,
       technologiesList.reactrouter,
       technologiesList.firebase
@@ -297,6 +301,7 @@ const cardData = {
       technologiesList.html5, 
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.nodejs,
       technologiesList.react,
       technologiesList.firebase
     ]
@@ -313,6 +318,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.nodejs,
       technologiesList.react,
       technologiesList.reactrouter,
       technologiesList.firebase
