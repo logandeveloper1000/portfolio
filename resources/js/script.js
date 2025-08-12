@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 20;
+const totalCards = 21;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -12,112 +12,122 @@ let cardsLoaded = 0;
 
 const technologiesList = {
   html5: {
-    src: "./resources/img/html5.png",
+    src: "./resources/img/technologies/html5.png",
     title: "HTML5",
     description: "HTML5 is the fifth and latest major version of the HyperText Markup Language, which is the standard language used to create and structure content on the web. It was developed to improve the way websites are built by introducing new elements and features that support modern multimedia, graphics, and interactive applications all without the need for external plugins like Flash.\n\nOne of the key advancements in HTML5 is the addition of semantic elements such as <header>, <footer>, <article>, and <section>, which help developers write cleaner, more meaningful code that is easier to read and maintain. HTML5 also includes built-in support for audio and video through the <audio> and <video> tags, making it easier to embed media directly into web pages.\n\nIn addition, HTML5 enhances form controls, enables local storage through localStorage and sessionStorage, and improves compatibility across different browsers and devices. It plays a vital role in responsive design and mobile-friendly web development."
   },
   css3: {
-    src: "./resources/img/css3.png",
+    src: "./resources/img/technologies/css3.png",
     title: "CSS3",
     description: "CSS3 is the latest version of Cascading Style Sheets, the language used to style and layout web pages. It builds on the foundation of previous CSS versions and introduces powerful new features that enhance the appearance, interactivity, and responsiveness of websites. With CSS3, developers can create visually rich web interfaces without relying heavily on images or JavaScript.\n\nKey features of CSS3 include rounded corners with border-radius, box and text shadows, gradients, transitions, animations, and flexible box layouts (Flexbox) for improved alignment and spacing. CSS Grid Layout, another major addition, allows developers to build complex, responsive page layouts with ease.\n\nCSS3 also supports media queries, which enable responsive design by allowing styles to change based on the screen size or device. This makes it easier to build mobile-friendly websites that adapt to various screen resolutions."
   },
   js: {
-    src: "./resources/img/js.png",
+    src: "./resources/img/technologies/js.png",
     title: "JavaScript",
     description: "JavaScript is a high-level, interpreted programming language that is widely used to create dynamic and interactive content on websites. It is a core technology of the web, alongside HTML and CSS, and enables developers to build engaging user experiences by allowing real-time updates, form validations, interactive elements, and much more.\n\nOriginally developed for client-side scripting in web browsers, JavaScript has evolved into a powerful, full-featured language that can also be used on the server side through platforms like Node.js. It supports object-oriented, functional, and event-driven programming paradigms, making it highly versatile and suitable for a wide range of applications.\n\nModern JavaScript includes features such as ES6+ syntax improvements, modules, promises, async/await, arrow functions, and classes, which make the code more readable, maintainable, and efficient. It also integrates seamlessly with APIs, databases, and other technologies to build full-stack web applications."
   },
+  nodejs: {
+    src: "./resources/img/technologies/nodejs.png",
+    title: "Node JS",
+    description: "Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript code outside of a web browser. Built on Google Chrome’s V8 JavaScript engine, Node.js is designed for building scalable, high-performance applications, particularly those that require real-time data handling or high concurrency. It uses an event-driven, non-blocking I/O model, meaning it can handle many operations simultaneously without waiting for one task to complete before starting another. This makes Node.js ideal for applications like chat systems, streaming services, APIs, and collaborative tools. Node.js also comes with npm (Node Package Manager), which provides access to a massive ecosystem of libraries and tools, enabling faster and more efficient development. Its versatility means it can be used for backend APIs, command-line tools, microservices, and even full-stack applications when paired with frameworks like Express.js or integrated with frontend technologies."
+  },
   typescript: {
-    src: "./resources/img/typescript.png",
+    src: "./resources/img/technologies/typescript.png",
     title: "TypeScript",
     description: "TypeScript is an open-source programming language developed by Microsoft that builds on JavaScript by adding optional static typing. It allows developers to define the types of variables, function parameters, return values, and objects, which helps catch errors during development rather than at runtime. TypeScript also supports modern JavaScript features (ES6 and beyond) and compiles down to plain JavaScript, ensuring compatibility with any browser, host, or operating system. By introducing features like interfaces, enums, generics, and advanced type inference, TypeScript enhances code readability, maintainability, and scalability, making it especially popular for large, complex applications. Its tooling support such as intelligent autocompletion, refactoring, and type checking further improves developer productivity."
   },
   react: {
-    src: "./resources/img/reactjs.png",
+    src: "./resources/img/technologies/reactjs.png",
     title: "React JS",
     description: "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It allows developers to create reusable UI components that efficiently update and render when data changes. React follows a component-based architecture, making code more modular, maintainable, and easier to scale.\n\nOne of Reacts key features is the virtual DOM, which improves performance by minimizing direct interactions with the real DOM. When the state of a component changes, React updates the virtual DOM first, compares it to the previous version, and then applies only the necessary changes to the actual DOM.\n\nReact uses JSX, a syntax extension that allows developers to write HTML-like code within JavaScript, making the code more readable and easier to work with. It also supports powerful concepts like props and state for managing data, and hooks for handling side effects and lifecycle events in functional components.\n\nReact can be used in combination with other tools and libraries such as React Router for navigation, Redux for state management, and Axios or Fetch for API calls. It is also commonly used with back-end services like Firebase or Node.js in full-stack development."
   },
+  reactredux: {
+    src: "./resources/img/technologies/react-redux.png",
+    title: "React Redux",
+    description: "React Redux is a powerful state management library designed specifically for React applications, providing a predictable and centralized way to manage an application’s data flow. Instead of storing and managing state independently within multiple components, React Redux maintains a single, centralized store that holds the entire application state. Components can access the data they need directly from this store and update it only by dispatching actions—plain JavaScript objects that describe the desired change. These actions are processed by reducers, which are pure functions responsible for determining how the state should be updated based on the action received. By enforcing this unidirectional data flow, React Redux helps ensure that state transitions are clear, predictable, and easy to trace, which significantly reduces bugs and makes complex applications easier to maintain. It also improves scalability, as adding new features or components does not require manually passing state through multiple levels of props. Instead, any component can directly connect to the store to read the relevant data or dispatch actions. React Redux integrates seamlessly with modern React through hooks like useSelector for retrieving data and useDispatch for sending actions, making it straightforward to connect components to the store without unnecessary boilerplate. Combined with tools like Redux DevTools, developers gain powerful debugging capabilities, allowing them to inspect changes over time, replay actions, and track how the application’s state evolves. "
+  },
   api: {
-    src: "./resources/img/api.png",
+    src: "./resources/img/technologies/api.png",
     title: "API",
     description: "An API (Application Programming Interface) is a structured set of rules, protocols, and tools that enable different software applications to communicate, exchange data, and use each other is functionalities without needing to understand the internal code or architecture behind them. It acts as an intermediary or bridge, defining the precise way in which a request should be made, the type and format of data to send, and how the resulting response should be delivered. This separation allows developers to integrate complex features and external services into their own applications more efficiently, focusing on building unique functionality while relying on existing, proven systems for other tasks. In essence, APIs provide a standardized way for programs to “speak the same language,” regardless of the technologies or programming languages they use. For example, a weather application on your phone might use a public weather API to retrieve current temperature and forecast data from a remote server, while a payment processing service might rely on a secure financial API to handle transactions. This interaction happens seamlessly, with the API ensuring that the request and response follow an agreed-upon format. By abstracting away the complexity of underlying systems, APIs make it possible to build software ecosystems where services, platforms, and applications are interconnected. They are fundamental to modern technology, powering integrations between mobile apps and cloud services, enabling websites to pull live data from external platforms, and allowing businesses to share capabilities with partners and customers. Whether in the form of web APIs, operating system APIs, or library APIs, they are the hidden framework that drives much of the interconnectivity and functionality we take for granted in today is digital world."
   },
   python: {
-    src: "./resources/img/python.png",
+    src: "./resources/img/technologies/python.png",
     title: "Python",
     description: "Python is a high-level, interpreted programming language known for its clear syntax and readability, making it an ideal choice for beginners and professionals alike. Created by Guido van Rossum and first released in 1991, Python emphasizes code simplicity and productivity, allowing developers to write fewer lines of code to accomplish tasks that would require more in other languages. One of Python is most powerful features is its extensive standard library and thriving ecosystem of third-party packages, which support a wide range of applications from web development and data analysis to machine learning, automation, and software testing. Popular frameworks like Django and Flask enable rapid web development, while libraries such as NumPy, pandas, and TensorFlow make Python a leader in scientific computing and artificial intelligence. Python uses indentation to define code blocks, which encourages clean and consistent coding practices. It also supports multiple programming paradigms, including procedural, object-oriented, and functional programming. With its cross-platform compatibility and active community, Python continues to grow in popularity and plays a central role in modern software development, data science, and automation workflows."
   },
   firebase: {
-    src: "./resources/img/firebase.png",
+    src: "./resources/img/technologies/firebase.png",
     title: "Firebase",
     description: "Firebase is a platform developed by Google that provides a suite of cloud-based tools and services to help developers build, improve, and grow web and mobile applications. It offers backend solutions such as authentication, real-time databases, hosting, cloud functions, analytics, and more all without the need to manage traditional servers.\n\nOne of the core features of Firebase is Firebase Authentication, which allows developers to easily implement secure login systems using email/password, phone numbers, or third-party providers like Google, Facebook, and GitHub. Firebase Firestore, a flexible NoSQL cloud database, enables real-time data synchronization and offline support, making it ideal for responsive apps.\n\nFirebase Hosting is another powerful feature that provides fast and secure static web hosting with a global content delivery network (CDN). It supports custom domains, HTTPS by default, and easy deployment via the Firebase CLI. Additionally, Firebase Cloud Functions allow developers to write backend logic that runs in response to events, such as database changes or HTTP requests.\n\nFirebase integrates seamlessly with popular front-end frameworks like React, Vue, and Angular, and supports both mobile platforms (iOS and Android) and web development."
   },
   tailwind: {
-    src: "./resources/img/tailwindcss.png",
+    src: "./resources/img/technologies/tailwindcss.png",
     title: "TailwindCSS",
     description: "Tailwind CSS is a utility-first CSS framework that allows developers to build custom user interfaces directly in their HTML by applying predefined utility classes. Instead of writing traditional CSS rules, Tailwind encourages the use of small, reusable classes to style elements quickly and consistently. This approach speeds up development and reduces the need for writing custom CSS.\n\nTailwind provides a comprehensive set of utility classes for controlling layout, spacing, typography, colors, shadows, borders, and more. It also supports responsive design out of the box with mobile-first breakpoints and built-in variants for hover, focus, and other states.\n\nOne of Tailwinds key strengths is its customization. Developers can configure the design system through the tailwind.config.js file, allowing for complete control over themes, breakpoints, and class generation. It also integrates seamlessly with tools like PostCSS, Webpack, and modern JavaScript frameworks like React, Vue, and Next.js.\n\nTailwind promotes consistency and scalability by reducing context switching between HTML and CSS files and enabling developers to prototype rapidly."
   },
   tmdb: {
-    src: "./resources/img/themoviedb.png",
+    src: "./resources/img/technologies/themoviedb.png",
     title: "The Movie DB",
     description: "The Movie Database (TMDb) API is a popular and powerful web service that provides access to a vast collection of movie, TV show, and celebrity data. It allows developers to fetch detailed information such as titles, overviews, release dates, genres, posters, trailers, and ratings. TMDb is widely used in entertainment-related applications for building features like movie search, trending content, cast details, and media libraries.\n\nThe API is organized into different endpoints that allow you to retrieve various types of content, including popular movies, top-rated shows, search results, upcoming releases, and more. Developers can make HTTP requests using tools like Fetch or Axios, and the responses are returned in JSON format, making them easy to use within front-end and back-end applications.\n\nTo use the TMDb API, developers need to sign up for an API key from the TMDb website. This key is used to authenticate requests and ensure proper usage. The API also supports image configurations, allowing developers to build complete UI experiences with full-sized posters and backdrops.\n\nThe TMDb API integrates well with modern JavaScript frameworks like React, Vue, and Angular. It's especially popular in clone projects and media apps because of its comprehensive data and reliable service."
   },
   axios: {
-    src: "./resources/img/axiosapi.png",
+    src: "./resources/img/technologies/axiosapi.png",
     title: "Axios API",
     description: "Axios is a promise-based JavaScript library used to make HTTP requests from the browser or Node.js. It simplifies API communication by handling GET, POST, PUT, and DELETE requests and supports features like request/response interception, automatic JSON transformation, and error handling."
   },
   trivia: {
-    src: "./resources/img/triviaapi.png",
+    src: "./resources/img/technologies/triviaapi.png",
     title: "Trivia API",
     description: "The Open Trivia Database API is a free and open-source API that provides a large collection of trivia questions across various categories and difficulty levels. It allows developers to fetch multiple-choice or true/false questions for use in quiz and trivia applications."
   },
   pokeapi: {
-    src: "./resources/img/pokeapi.png",
+    src: "./resources/img/technologies/pokeapi.png",
     title: "PokeAPI",
     description: "The PokeAPI is a free and open-source RESTful API that provides detailed data about Pokémon, including their names, images, types, stats, abilities, and evolution chains. It's widely used by developers to build applications related to the Pokémon universe."
   },
   bootstrap: {
-    src: "./resources/img/bootstrap.png",
+    src: "./resources/img/technologies/bootstrap.png",
     title: "Bootstrap",
     description: "Bootstrap 5 is a popular open-source front-end framework used for building responsive and mobile-first websites. It provides a wide range of pre-designed UI components, layout utilities, and JavaScript plugins, allowing developers to create modern web interfaces quickly and efficiently without writing extensive custom CSS."
   },
   vite: {
-    src: "./resources/img/vite.png",
+    src: "./resources/img/technologies/vite.png",
     title: "Vite",
     description: "Vite is a fast and modern front-end build tool that provides instant server start, lightning-fast hot module replacement (HMR), and optimized production builds. Designed for frameworks like React, Vue, and others, Vite simplifies the development experience with minimal configuration and efficient performance."
   },
   fakestore: {
-    src: "./resources/img/fakestoreapi.png",
+    src: "./resources/img/technologies/fakestoreapi.png",
     title: "FakeStore API",
     description: "The FakeStore API is a free, public RESTful API that provides mock data for testing and prototyping e-commerce applications. It includes endpoints for products, categories, and user carts, allowing developers to perform GET, POST, PUT, and DELETE requests without needing a real backend."
   },
   reactrouter: {
-    src: "./resources/img/reactrouter.png",
+    src: "./resources/img/technologies/reactrouter.png",
     title: "React Router",
     description: "React Router is a standard library for routing in React applications. It enables dynamic navigation between components, supports nested routes, URL parameters, and client-side rendering without full page reloads. React Router helps create multi-page experiences in single-page applications."
   },
   reactbootstrap: {
-    src: "./resources/img/reactbootstrap.png",
+    src: "./resources/img/technologies/reactbootstrap.png",
     title: "React Bootstrap",
     description: "React Bootstrap is a front-end framework that rebuilds Bootstrap components using React. It provides ready-to-use UI components like modals, buttons, forms, and navbars, all fully integrated with React`s component-based architecture, making it easier to build responsive and interactive interfaces."
   },
   mysql: {
-    src: "./resources/img/mysql.png",
+    src: "./resources/img/technologies/mysql.png",
     title: "MySQL",
     description: "MySQL is an open-source relational database management system (RDBMS) that uses Structured Query Language (SQL) to store, organize, and manage data. It is widely used for building and maintaining databases in web applications, desktop software, and enterprise systems due to its reliability, scalability, and ease of use. Originally developed by MySQL AB and now owned by Oracle Corporation, MySQL follows a client server architecture where the database server processes requests from client applications. It supports features such as transactions, indexing, replication, and advanced security controls, making it suitable for both small projects and large-scale, high-traffic environments. MySQL is highly compatible with many programming languages and frameworks, including PHP, Python, Java, and Node.js, and it is often paired with web servers like Apache or Nginx in the popular LAMP (Linux, Apache, MySQL, PHP/Perl/Python) stack. Its ability to handle large amounts of data efficiently, combined with strong community support and frequent updates, has made MySQL one of the most popular database solutions in the world."
   },
   sqlalchemy: {
-    src: "./resources/img/sqlalchemy.png",
+    src: "./resources/img/technologies/sqlalchemy.png",
     title: "SQLAlchemy",
     description: "SQLAlchemy is a powerful and flexible Python library used for working with relational databases through both high-level and low-level interfaces. It provides an Object Relational Mapper (ORM) that allows developers to interact with databases using Python classes and objects instead of writing raw SQL, as well as a Core layer for writing SQL statements directly when finer control is needed. Designed to support multiple database backends such as MySQL, PostgreSQL, SQLite, and Oracle, SQLAlchemy acts as a bridge between Python code and the database, translating Pythonic commands into optimized SQL queries. It handles database connections, schema definitions, relationships between tables, and query execution, while also providing tools for transactions, migrations, and connection pooling. SQLAlchemy is widely used in both small and large projects because it combines the productivity of ORM with the power of direct SQL when required, giving developers the best of both worlds clean, maintainable code without sacrificing performance or flexibility."
   },
   flask: {
-    src: "./resources/img/flask.png",
+    src: "./resources/img/technologies/flask.png",
     title: "Flask",
     description: "Flask is a lightweight and flexible Python web framework designed to help developers build web applications quickly and with minimal overhead. Known as a “microframework,” Flask provides the essential tools for routing, request handling, and template rendering, while leaving the choice of additional components such as database integration, authentication, or form handling up to the developer. Created by Armin Ronacher and released in 2010, Flask follows a simple, modular design that makes it easy to learn for beginners while remaining powerful enough for complex applications. It is built on top of the Werkzeug WSGI toolkit for request and response handling and uses the Jinja2 template engine for rendering dynamic HTML pages. Flask’s minimal core and extensive ecosystem of extensions allow developers to customize their applications to fit specific needs. Whether building a small API or a full-featured web platform, Flask’s simplicity, flexibility, and strong community support have made it one of the most popular Python frameworks for web development."
   },
   marshmallow: {
-    src: "./resources/img/marshmallow.png",
+    src: "./resources/img/technologies/marshmallow.png",
     title: "Marshmallow",
     description: "Marshmallow is a Python library used for object serialization, deserialization, and data validation. It allows developers to convert complex data types such as Python objects, dictionaries, and query results from ORMs into JSON, XML, or other formats for easy storage and transfer, and then back into Python objects when needed. One of Marshmallow’s core strengths is its built-in validation system, which ensures that incoming data meets specific requirements before it is processed or saved. Developers define schemas that describe the structure, types, and rules for their data, and Marshmallow automatically handles type conversion, field mapping, and error reporting. Marshmallow integrates seamlessly with popular ORMs like SQLAlchemy, making it a common choice for projects involving RESTful APIs. Its combination of simplicity, flexibility, and powerful validation tools makes it a go-to library for managing clean, consistent data in Python applications."
   }
@@ -125,24 +135,7 @@ const technologiesList = {
 
 const cardData = {
 
-  20: {
-    title: "Task Management",
-    imageSrc: "./resources/img/projects/task-management.png",
-    shortDescription: "Task Management is a modern web application built with TypeScript and React that enables users to create, edit, and organize their tasks with ease. Featuring due date tracking, completion status, and an intuitive interface, it’s designed to keep productivity simple and effective.",
-    longDescription: "Task Management is a full-featured, responsive web application developed with TypeScript and React, offering a streamlined way to organize and track daily tasks. Users can easily create new tasks, add detailed descriptions, set due dates, and mark items as completed. The platform also allows editing and deleting tasks, ensuring complete control over one’s workflow. With a clean, minimal interface and structured state management, Task Management delivers an intuitive and efficient user experience. Authentication ensures secure access, and deployment on Netlify makes the application accessible from any device, anywhere. Whether for personal to-do lists or professional project planning, Task Management is designed to boost productivity and keep tasks organized in a simple, user-friendly way.",
-    compatibility: "Mobile Tablet Desktop",
-    link: "https://task-management-typescript.netlify.app/",
-    github: "https://github.com/logandeveloper1000/Task-Management",
-    technologies: [
-      technologiesList.html5,
-      technologiesList.css3,
-      technologiesList.typescript,
-      technologiesList.react,
-      technologiesList.reactrouter,
-      technologiesList.api
-    ]
-  },
-  19: {
+  21: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -159,7 +152,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  18: {
+  20: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -176,7 +169,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  17: {
+  19: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -188,7 +181,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  16: {
+  18: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -202,6 +195,45 @@ const cardData = {
       technologiesList.sqlalchemy,
       technologiesList.flask,
       technologiesList.marshmallow,
+    ]
+  },
+  17: {
+    title: "Advanced React Shop",
+    imageSrc: "./resources/img/projects/advanced-react-shop.png",
+    shortDescription: "Advanced React Shop is a React and TypeScript e-commerce application that integrates with the FakeStore API, enabling users to browse a variety of products, filter by category, and manage a persistent shopping cart using Redux Toolkit.",
+    longDescription: "Advanced React Shop is a feature-rich e-commerce web application built with React, TypeScript, Redux Toolkit, and React Query. It fetches product data from the FakeStore API and presents it in a clean, responsive grid layout, showing key details such as product title, price, category, rating, description, and images. The application includes a dynamic category filter that updates the product list based on user selection, with automatic image handling to ensure consistent display even when certain category images fail due to hotlink restrictions. Users can add items to their shopping cart, adjust quantities, and remove products, with cart state managed globally via Redux Toolkit and persisted in sessionStorage for seamless continuity across sessions. Server data fetching and caching are handled by React Query, providing efficient and reactive UI updates. The project is structured into modular components, features, and utilities, making it scalable and maintainable. While fully functional, the application also serves as a foundation for further enhancements such as advanced error handling, product detail pages, search functionality, and user authentication, making it an ideal starting point for building robust, modern e-commerce solutions.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://advanced-react-shop.netlify.app/",
+    github: "https://github.com/logandeveloper1000/advanced-react-shop",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.nodejs,
+      technologiesList.typescript,
+      technologiesList.react,
+      technologiesList.reactredux,
+      technologiesList.vite,
+      technologiesList.api
+    ]
+  },
+  16: {
+    title: "Task Management",
+    imageSrc: "./resources/img/projects/task-management.png",
+    shortDescription: "Task Management is a modern web application built with TypeScript and React that enables users to create, edit, and organize their tasks with ease. Featuring due date tracking, completion status, and an intuitive interface, it’s designed to keep productivity simple and effective.",
+    longDescription: "Task Management is a full-featured, responsive web application developed with TypeScript and React, offering a streamlined way to organize and track daily tasks. Users can easily create new tasks, add detailed descriptions, set due dates, and mark items as completed. The platform also allows editing and deleting tasks, ensuring complete control over one’s workflow. With a clean, minimal interface and structured state management, Task Management delivers an intuitive and efficient user experience. Authentication ensures secure access, and deployment on Netlify makes the application accessible from any device, anywhere. Whether for personal to-do lists or professional project planning, Task Management is designed to boost productivity and keep tasks organized in a simple, user-friendly way.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://task-management-typescript.netlify.app/",
+    github: "https://github.com/logandeveloper1000/Task-Management",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.nodejs,
+      technologiesList.typescript,
+      technologiesList.react,
+      technologiesList.reactrouter,
+      technologiesList.api
     ]
   },
   15: {
