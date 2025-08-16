@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 21;
+const totalCards = 22;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -44,7 +44,7 @@ const technologiesList = {
   reactredux: {
     src: "./resources/img/technologies/react-redux.png",
     title: "React Redux",
-    description: "React Redux is a powerful state management library designed specifically for React applications, providing a predictable and centralized way to manage an application’s data flow. Instead of storing and managing state independently within multiple components, React Redux maintains a single, centralized store that holds the entire application state. Components can access the data they need directly from this store and update it only by dispatching actions—plain JavaScript objects that describe the desired change. These actions are processed by reducers, which are pure functions responsible for determining how the state should be updated based on the action received. By enforcing this unidirectional data flow, React Redux helps ensure that state transitions are clear, predictable, and easy to trace, which significantly reduces bugs and makes complex applications easier to maintain. It also improves scalability, as adding new features or components does not require manually passing state through multiple levels of props. Instead, any component can directly connect to the store to read the relevant data or dispatch actions. React Redux integrates seamlessly with modern React through hooks like useSelector for retrieving data and useDispatch for sending actions, making it straightforward to connect components to the store without unnecessary boilerplate. Combined with tools like Redux DevTools, developers gain powerful debugging capabilities, allowing them to inspect changes over time, replay actions, and track how the application’s state evolves. "
+    description: "React Redux is a powerful state management library designed specifically for React applications, providing a predictable and centralized way to manage an application’s data flow. Instead of storing and managing state independently within multiple components, React Redux maintains a single, centralized store that holds the entire application state. Components can access the data they need directly from this store and update it only by dispatching actions plain JavaScript objects that describe the desired change. These actions are processed by reducers, which are pure functions responsible for determining how the state should be updated based on the action received. By enforcing this unidirectional data flow, React Redux helps ensure that state transitions are clear, predictable, and easy to trace, which significantly reduces bugs and makes complex applications easier to maintain. It also improves scalability, as adding new features or components does not require manually passing state through multiple levels of props. Instead, any component can directly connect to the store to read the relevant data or dispatch actions. React Redux integrates seamlessly with modern React through hooks like useSelector for retrieving data and useDispatch for sending actions, making it straightforward to connect components to the store without unnecessary boilerplate. Combined with tools like Redux DevTools, developers gain powerful debugging capabilities, allowing them to inspect changes over time, replay actions, and track how the application’s state evolves. "
   },
   api: {
     src: "./resources/img/technologies/api.png",
@@ -135,7 +135,7 @@ const technologiesList = {
 
 const cardData = {
 
-  21: {
+  22: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -153,7 +153,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  20: {
+  21: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -171,7 +171,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  19: {
+  20: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -183,7 +183,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  18: {
+  19: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -197,6 +197,26 @@ const cardData = {
       technologiesList.sqlalchemy,
       technologiesList.flask,
       technologiesList.marshmallow,
+    ]
+  },
+  18: {
+    title: "Advanced React Shop Firebase",
+    imageSrc: "./resources/img/projects/advanced-react-shop-firebase.png",
+    shortDescription: "Advanced React Shop Firebase is a typed React + TypeScript e-commerce demo that uses Firebase Auth, Firestore, and Storage. Users can register/login, browse products by category, add items to a Redux Toolkit cart (persisted to sessionStorage), and place orders saved in Firestore. Data fetching and caching are handled with React Query, routing with React Router, and the app includes an admin-style Add Product flow with image uploads to Firebase Storage.",
+    longDescription: "Advanced React Shop Firebase is a modern, serverless e-commerce demo that showcases clean React architecture with a Firebase backend. The app provides a complete flow from authentication and product browsing to cart management and order creation implemented with React 18 + TypeScript, Redux Toolkit, React Query, and Firebase’s Auth, Firestore, and Storage services. After signing up or logging in with Firebase Auth, shoppers can explore a categorized product catalog, add items to a Redux-managed cart, and check out to create an order document in Firestore. Cart state is persisted to sessionStorage for a smooth, per-tab experience. An admin-style “Add Product” page lets authenticated users upload images to Firebase Storage and instantly publish products; categories are kept in sync via lightweight Firestore documents. Routing is protected with a small auth guard so only signed-in users reach the main shopping, cart, orders, and profile pages. Under the hood, React Query handles server state (fetching, caching, and refetching) for products, categories, and orders, while Redux Toolkit powers deterministic cart logic with selectors for totals and item counts. The codebase is fully typed, modular, and easy to extend ideal for learning or as a foundation for a production build.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://advanced-react-shop-firebase.netlify.app/login",
+    github: "https://github.com/logandeveloper1000/advanced-react-shop-firebase",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.nodejs,
+      technologiesList.typescript,
+      technologiesList.react,
+      technologiesList.reactredux,
+      technologiesList.vite,
+      technologiesList.firebase
     ]
   },
   17: {
