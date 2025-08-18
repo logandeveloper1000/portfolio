@@ -224,7 +224,9 @@ const cardData = {
       technologiesList.nodejs,
       technologiesList.react,
       technologiesList.reactrouter,
-      technologiesList.firebase
+      technologiesList.firebase,
+      technologiesList.jest,
+      technologiesList.cicd,
     ]
   },
   18: {
