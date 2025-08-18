@@ -130,12 +130,22 @@ const technologiesList = {
     src: "./resources/img/technologies/marshmallow.png",
     title: "Marshmallow",
     description: "Marshmallow is a Python library used for object serialization, deserialization, and data validation. It allows developers to convert complex data types such as Python objects, dictionaries, and query results from ORMs into JSON, XML, or other formats for easy storage and transfer, and then back into Python objects when needed. One of Marshmallow’s core strengths is its built-in validation system, which ensures that incoming data meets specific requirements before it is processed or saved. Developers define schemas that describe the structure, types, and rules for their data, and Marshmallow automatically handles type conversion, field mapping, and error reporting. Marshmallow integrates seamlessly with popular ORMs like SQLAlchemy, making it a common choice for projects involving RESTful APIs. Its combination of simplicity, flexibility, and powerful validation tools makes it a go-to library for managing clean, consistent data in Python applications."
+  },
+  jest: {
+    src: "./resources/img/technologies/jest.png",
+    title: "Jest",
+    description: "Jest is a fast, batteries-included testing framework for JavaScript and TypeScript that’s widely used with React and Node.js. It combines a test runner, assertion library, mocking utilities, snapshot testing, and built-in code coverage so you don’t have to assemble multiple tools. Out of the box it can simulate a browser environment via JSDOM for component tests, run tests in parallel for speed, watch files and re-run affected tests as you code, and handle both CommonJS and ESM projects. TypeScript works through Babel or ts-jest, and its plugin ecosystem lets you add custom matchers, reporters, and transformers. In practice, you write small, focused tests alongside your source files and run them with a single command; Jest handles discovery, isolation, and mocks for functions, timers, modules, and network calls. Snapshot tests help catch unintended UI or output changes. For full end-to-end browser automation you’d usually pair it with tools like Playwright or Cypress, and if you’re on a Vite stack and want even tighter integration, Vitest offers a very similar API."
+  },
+  cicd: {
+    src: "./resources/img/technologies/cicd.png",
+    title: "CI/CD",
+    description: "CI/CD as continuous integration and continuous delivery/deployment—is a software practice that automates how code is built, tested, and released. With continuous integration, developers merge small changes into a shared branch frequently; every push triggers an automated pipeline that installs dependencies, lint-checks, compiles, runs unit and integration tests, and surfaces results within minutes. This tight feedback loop catches regressions early, keeps the main branch releasable, and encourages incremental, low-risk changes instead of big, brittle merges.Continuous delivery extends that pipeline to automatically produce versioned, deployable artifacts and push them to a staging environment, where a human can approve release; continuous deployment goes one step further by promoting healthy builds to production automatically. Modern pipelines often add security scans, end-to-end tests, and infrastructure-as-code steps, then deploy using strategies like blue-green or canary releases and guard behavior with feature flags. The net effect is faster iteration, higher quality, reproducible releases, simpler rollbacks, and clear traceability from commit to production across tools such as GitHub Actions, GitLab CI, Jenkins, and other orchestrators."
   }
 };
 
 const cardData = {
 
-  22: {
+  23: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -153,7 +163,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  21: {
+  22: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -171,7 +181,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  20: {
+  21: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -183,7 +193,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  19: {
+  20: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -197,6 +207,24 @@ const cardData = {
       technologiesList.sqlalchemy,
       technologiesList.flask,
       technologiesList.marshmallow,
+    ]
+  },
+  19: {
+    title: "Advanced React Shop Firebase CI/CD",
+    imageSrc: "./resources/img/projects/advanced-react-shop-firebase-cicd.png",
+    shortDescription: "Advanced React Shop is a Firebase-backed e-commerce app built with React + TypeScript that ships through a test-gated CI/CD pipeline. Users can register/login, browse products by category, add items to a cart, and place orders; deployments to Vercel only occur after Jest + React Testing Library tests pass in GitHub Actions.",
+    longDescription: "Advanced React Shop is a modern React + TypeScript e-commerce application that demonstrates production-style architecture and automation. The app uses Firebase (Auth, Firestore, Storage) as a lightweight backend, Redux Toolkit for cart state with sessionStorage persistence, React Query for data fetching/caching, and React Router for navigation. Shoppers can authenticate, filter a product catalog by category, add items to the cart, and place orders. An admin-style Add Product page uploads images to Firebase Storage and creates products in Firestore; orders are recorded and listed per user. Reliability is enforced via TDD: two unit tests validate component rendering and interactions (CategorySelect, ProductCard), and an integration test confirms the critical flow—clicking Add to Cart updates the Redux cart. Testing is implemented with Jest and React Testing Library. A streamlined CI/CD pipeline built on GitHub Actions runs on every push/PR to main: install → npm test → build. Only if tests pass does the deployment job trigger, using the Vercel CLI (vercel pull → vercel build → vercel deploy --prebuilt) to publish the app. Public VITE_* Firebase variables are provided via Vercel Environment Variables, while deploy credentials (VERCEL_TOKEN, ORG_ID, PROJECT_ID) remain GitHub Secrets. This project illustrates clean React patterns, typed APIs, deterministic tests, and a practical, test-gated delivery setup suitable for small production apps and teaching CI/CD fundamentals.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://advanced-react-shop-firebase-cicd.vercel.app/",
+    github: "https://github.com/logandeveloper1000/advanced-react-shop-firebase-CICD",
+    technologies: [
+      technologiesList.html5,
+      technologiesList.css3,
+      technologiesList.js,
+      technologiesList.nodejs,
+      technologiesList.react,
+      technologiesList.reactrouter,
+      technologiesList.firebase
     ]
   },
   18: {
@@ -892,7 +920,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow"
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow", "Jest", "CI/CD"
 ];
 
 const filterBtn = document.getElementById("filterBtn");
