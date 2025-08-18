@@ -950,7 +950,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow", "Jest", "CI/CD"
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow", "Jest", "CI/CD", "SQLite", "Homebrew"
 ];
 
 const filterBtn = document.getElementById("filterBtn");
