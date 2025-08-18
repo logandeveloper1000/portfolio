@@ -140,12 +140,22 @@ const technologiesList = {
     src: "./resources/img/technologies/cicd.png",
     title: "CI/CD",
     description: "CI/CD as continuous integration and continuous delivery/deployment is a software practice that automates how code is built, tested, and released. With continuous integration, developers merge small changes into a shared branch frequently; every push triggers an automated pipeline that installs dependencies, lint-checks, compiles, runs unit and integration tests, and surfaces results within minutes. This tight feedback loop catches regressions early, keeps the main branch releasable, and encourages incremental, low-risk changes instead of big, brittle merges.Continuous delivery extends that pipeline to automatically produce versioned, deployable artifacts and push them to a staging environment, where a human can approve release; continuous deployment goes one step further by promoting healthy builds to production automatically. Modern pipelines often add security scans, end-to-end tests, and infrastructure-as-code steps, then deploy using strategies like blue-green or canary releases and guard behavior with feature flags. The net effect is faster iteration, higher quality, reproducible releases, simpler rollbacks, and clear traceability from commit to production across tools such as GitHub Actions, GitLab CI, Jenkins, and other orchestrators."
-  }
+  },
+  sqlite: {
+    src: "./resources/img/technologies/sqlite.png",
+    title: "SQLite",
+    description: "SQLite is a lightweight, serverless relational database engine that stores an entire database tables, indexes, and data in a single cross-platform file. It speaks standard SQL, is ACID-compliant, requires zero configuration, and runs in-process with your application, which makes it fast, portable, and easy to embed. Because there’s no separate server or daemon, it’s a popular choice for mobile apps, desktop software, embedded/IoT devices, and small websites, as well as for prototyping and testing. SQLite includes powerful features such as transactions, triggers, views, and optional extensions like full-text search (FTS), JSON functions, and R*Tree indexes. Its main trade-off is concurrency: it handles many concurrent readers well but allows only one writer at a time, so it isn’t designed for heavy multi-user, networked workloads. For local storage, bundled data, and simple deployments, SQLite offers a robust, dependable solution with minimal operational overhead."
+  },
+  homebrew: {
+    src: "./resources/img/technologies/homebrew.png",
+    title: "Homebrew",
+    description: "Homebrew is a free, open-source package manager for macOS and Linux that installs command-line tools and desktop apps with simple commands like brew install. It keeps software in its own “Cellar” and symlinks executables into your PATH, using /opt/homebrew on Apple Silicon and /usr/local on Intel Macs. Packages are “formulae” (CLI tools) and “casks” (GUI apps), fetched as prebuilt “bottles” when available, with cryptographic checks for integrity. Homebrew updates itself and your packages via Git, supports third-party repositories (“taps”), background services with brew services, and reproducible setups via a Brewfile. It’s popular because it avoids sudo for most operations, minimizes conflicts with the system, and makes automation easy. Trade-offs include relying on community-maintained recipes and occasional breakage during major OS or toolchain changes, but for most developers it provides a fast, dependable way to manage software outside the App Store."
+  },
 };
 
 const cardData = {
 
-  23: {
+  24: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -163,7 +173,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  22: {
+  23: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -181,7 +191,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  21: {
+  22: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -193,7 +203,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  20: {
+  21: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -209,7 +219,7 @@ const cardData = {
       technologiesList.marshmallow,
     ]
   },
-  19: {
+  20: {
     title: "Advanced React Shop Firebase CI/CD",
     imageSrc: "./resources/img/projects/advanced-react-shop-firebase-cicd.png",
     shortDescription: "Advanced React Shop is a Firebase-backed e-commerce app built with React + TypeScript that ships through a test-gated CI/CD pipeline. Users can register/login, browse products by category, add items to a cart, and place orders; deployments to Vercel only occur after Jest + React Testing Library tests pass in GitHub Actions.",
@@ -228,6 +238,23 @@ const cardData = {
       technologiesList.firebase,
       technologiesList.jest,
       technologiesList.cicd,
+    ]
+  },
+  19: {
+    title: "Application Factory Pattern",
+    imageSrc: "./resources/img/projects/application-factory-pattern.png",
+    shortDescription: "A REST API built with Flask’s application factory pattern and Blueprints to manage an auto shop’s Mechanics and Service Tickets. It uses SQLAlchemy for data models (many-to-many between tickets and mechanics) and Marshmallow for serialization/validation. Endpoints cover full CRUD for mechanics plus creating/listing tickets and assigning/removing mechanics; a Postman collection and migrations are included.",
+    longDescription: "This project is a compact, production-style Flask backend that demonstrates clean architecture and modular design while solving a concrete domain: managing an auto shop’s mechanics and service tickets. The application is created via the application factory in app/__init__.py, where core extensions are initialized and two blueprints mechanic and service_ticket are registered with URL prefixes /mechanics and /service-tickets. Data is modeled with SQLAlchemy, using a normalized schema in which ServiceTicket and Mechanic are linked through a many-to-many association table so that multiple mechanics can be assigned to a single ticket and a mechanic can participate in many tickets. Marshmallow, via Flask-Marshmallow, provides SQLAlchemy-aware schemas to validate incoming payloads and serialize responses consistently, ensuring clear contracts at the API boundary.Functionally, the API exposes full CRUD for mechanics and focused workflows for tickets: creating and listing service tickets and assigning or removing mechanics from a ticket using relationship attributes for intuitive list-like operations. Responses are JSON and pagination-ready, and the structure keeps concerns separated: models define persistence, schemas handle validation and serialization, and blueprints encapsulate routes per resource. The project includes Flask-Migrate migrations so the database can be created and evolved reliably (SQLite by default for simplicity) and ships with a ready-to-import Postman collection that mirrors every endpoint and includes sample payloads for quick verification. The result is a small but extensible foundation that fulfills the assignment requirements end-to-end while leaving a clear path for enhancements such as authentication and authorization, filtering and pagination, error normalization, and CI integration.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/application-factory-pattern",
+    technologies: [
+      technologiesList.python,
+      technologiesList.flask,
+      technologiesList.sqlalchemy,
+      technologiesList.marshmallow,
+      technologiesList.sqlite,
+      technologiesList.homebrew,
     ]
   },
   18: {
