@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 22;
+const totalCards = 25;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -155,6 +155,22 @@ const technologiesList = {
 
 const cardData = {
 
+  25: {
+    title: "Advanced API Development",
+    imageSrc: "./resources/img/projects/advanced-api-development.png",
+    shortDescription: "A production-style Flask API for a mechanic shop that manages customers, mechanics, service tickets, and inventory. It features JWT authentication with role-based access (customers and mechanics), per-route and global rate limiting, response caching, SQLAlchemy 2.0 models with many-to-many relations, and pagination. A ready Postman collection is included to demo the full workflow from login to creating tickets, assigning mechanics, adding parts, and viewing ranked mechanics.",
+    longDescription: "This project delivers a complete “Advanced API Development” example for a mechanic service domain using Flask. It implements secure authentication with python-jose JWTs and clear authorization boundaries for two roles: customers, who authenticate to create and manage their own service tickets and view “my tickets,” and mechanics, who authenticate to perform operational tasks like assigning themselves to tickets and attaching inventory parts. Reliability and performance concerns are addressed with Flask-Limiter for both blanket and per-route rate limits, and Flask-Caching for caching expensive reads such as the ranked list of mechanics by tickets completed. The data layer uses SQLAlchemy 2.0 with Flask-Migrate and models real relationships in the domain: customers own tickets, mechanics and tickets are linked through a many-to-many association, and tickets also connect to inventory parts through a second many-to-many association. The customers index endpoint demonstrates modern pagination via db.paginate(select(...)), while ticket management includes targeted endpoints to add or remove mechanics and to append parts to a ticket. The repository ships with a Postman collection that captures tokens automatically and threads IDs between requests, making it easy to run an end-to-end demo of authentication, ticket creation, mechanic assignment, part attachment, cached reads, and protected routes all running locally with a simple SQLite database and a .env configuration.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/advanced-api-development/tree/main",
+    technologies: [
+      technologiesList.python,
+      technologiesList.flask,
+      technologiesList.sqlalchemy,
+      technologiesList.marshmallow,
+      technologiesList.sqlite,
+    ]
+  },
   24: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
