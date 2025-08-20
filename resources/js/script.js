@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 25;
+const totalCards = 26;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -151,11 +151,16 @@ const technologiesList = {
     title: "Homebrew",
     description: "Homebrew is a free, open-source package manager for macOS and Linux that installs command-line tools and desktop apps with simple commands like brew install. It keeps software in its own “Cellar” and symlinks executables into your PATH, using /opt/homebrew on Apple Silicon and /usr/local on Intel Macs. Packages are “formulae” (CLI tools) and “casks” (GUI apps), fetched as prebuilt “bottles” when available, with cryptographic checks for integrity. Homebrew updates itself and your packages via Git, supports third-party repositories (“taps”), background services with brew services, and reproducible setups via a Brewfile. It’s popular because it avoids sudo for most operations, minimizes conflicts with the system, and makes automation easy. Trade-offs include relying on community-maintained recipes and occasional breakage during major OS or toolchain changes, but for most developers it provides a fast, dependable way to manage software outside the App Store."
   },
+  unittest: {
+    src: "./resources/img/technologies/unittest.png",
+    title: "Unittest",
+    description: "Unittest is Python’s built-in xUnit-style testing framework for writing repeatable, automated tests. You group related checks into TestCase classes with optional setUp and tearDown methods to create and clean up fixtures, then use rich assertion methods to verify behavior. It supports test discovery, test suites, skipping and expected-failure annotations, subtests for parameterized cases, and integrates tightly with unittest.mock for isolating dependencies. Tests run from the command line with python -m unittest and produce machine-readable exit codes that fit neatly into CI pipelines. In a Flask project, unittest lets you spin up an app in testing mode, hit routes through the test client, and verify both positive and negative paths against an in-memory database, helping prevent regressions and documenting expected behavior."
+  },
 };
 
 const cardData = {
 
-  25: {
+  26: {
     title: "Advanced API Development",
     imageSrc: "./resources/img/projects/advance-api-development.png",
     shortDescription: "A production-style Flask API for a mechanic shop that manages customers, mechanics, service tickets, and inventory. It features JWT authentication with role-based access (customers and mechanics), per-route and global rate limiting, response caching, SQLAlchemy 2.0 models with many-to-many relations, and pagination. A ready Postman collection is included to demo the full workflow from login to creating tickets, assigning mechanics, adding parts, and viewing ranked mechanics.",
@@ -171,7 +176,7 @@ const cardData = {
       technologiesList.sqlite,
     ]
   },
-  24: {
+  25: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -189,7 +194,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  23: {
+  24: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -207,7 +212,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  22: {
+  23: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -219,7 +224,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  21: {
+  22: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -235,7 +240,7 @@ const cardData = {
       technologiesList.marshmallow,
     ]
   },
-  20: {
+  21: {
     title: "Advanced React Shop Firebase CI/CD",
     imageSrc: "./resources/img/projects/advanced-react-shop-firebase-cicd.png",
     shortDescription: "Advanced React Shop is a Firebase-backed e-commerce app built with React + TypeScript that ships through a test-gated CI/CD pipeline. Users can register/login, browse products by category, add items to a cart, and place orders; deployments to Vercel only occur after Jest + React Testing Library tests pass in GitHub Actions.",
@@ -254,6 +259,22 @@ const cardData = {
       technologiesList.firebase,
       technologiesList.jest,
       technologiesList.cicd,
+    ]
+  },
+  20: {
+    title: "Mechanic API",
+    imageSrc: "./resources/img/projects/mechanic-api.png",
+    shortDescription: "Mechanic API is a Flask-based REST service for managing customers, mechanics, and service tickets. It features JWT authentication, request validation with Marshmallow, SQLAlchemy models, rate limiting, response caching, and interactive Swagger documentation, with full unittest coverage for every route.",
+    longDescription: "Mechanic API is a teaching focused REST backend built with Flask that demonstrates clean blueprint architecture and production-minded practices in a compact codebase. The service models three core resources customers, mechanics, and service tickets using SQLAlchemy, while Marshmallow schemas handle payload validation and serialization. Authentication is implemented with JWTs so users can register, log in, and then access protected endpoints by passing a bearer token. Operational concerns are showcased with Flask-Limiter to throttle sensitive routes and Flask-Caching to speed up frequently accessed responses. Every endpoint is documented in Swagger via YAML docstrings and rendered in an interactive UI at /docs, including tags, summaries, request parameters, example responses, and security definitions. The project ships with a full unittest suite that exercises both positive and negative paths for each blueprint, and it runs against SQLite by default for easy local development while remaining simple to reconfigure for other databases.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/mechanic-api",
+    technologies: [
+      technologiesList.python,
+      technologiesList.flask,
+      technologiesList.sqlalchemy,
+      technologiesList.marshmallow,
+      technologiesList.unittest,
     ]
   },
   19: {
@@ -966,7 +987,7 @@ function codewarsOut(){
 }
 
 const allTechnologies = [
-  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow", "Jest", "CI/CD", "SQLite", "Homebrew"
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React JS", "React Redux", "Node JS", "Vite", "Python", "Firebase", "API", "Axios API", "Trivia API", "PokeAPI", "Bootstrap", "FakeStore API", "React Bootstrap", "MySQL", "SQLAlchemy", "Flask", "Marshmallow", "Jest", "CI/CD", "SQLite", "Homebrew", "Unittest"
 ];
 
 const filterBtn = document.getElementById("filterBtn");
