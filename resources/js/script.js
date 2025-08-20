@@ -576,6 +576,7 @@ const cardData = {
       technologiesList.html5,
       technologiesList.css3,
       technologiesList.js,
+      technologiesList.bootstrap,
     ]
   },
   2: {
