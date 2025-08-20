@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 26;
+const totalCards = 27;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -160,7 +160,7 @@ const technologiesList = {
 
 const cardData = {
 
-  26: {
+  27: {
     title: "Advanced API Development",
     imageSrc: "./resources/img/projects/advance-api-development.png",
     shortDescription: "A production-style Flask API for a mechanic shop that manages customers, mechanics, service tickets, and inventory. It features JWT authentication with role-based access (customers and mechanics), per-route and global rate limiting, response caching, SQLAlchemy 2.0 models with many-to-many relations, and pagination. A ready Postman collection is included to demo the full workflow from login to creating tickets, assigning mechanics, adding parts, and viewing ranked mechanics.",
@@ -176,7 +176,7 @@ const cardData = {
       technologiesList.sqlite,
     ]
   },
-  25: {
+  26: {
     title: "Connection Accounting",
     imageSrc: "./resources/img/projects/connection-accounting.png",
     shortDescription: "Connection Accounting is a multilingual web app built with React and Firebase that enables small business owners to securely track income, expenses, and account balances. The app features real-time data management, visual financial reports using Chart.js, and full support for English, Spanish, and Portuguese.",
@@ -194,7 +194,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  24: {
+  25: {
     title: "Chat App",
     imageSrc: "./resources/img/projects/chat-app.png",
     shortDescription: "A full-stack real-time chat application built with React, Firebase Authentication, and Firestore. Features include secure user login/registration, protected routes, live chat messaging with read receipts, typing indicators, and real-time alerts for unread messages.",
@@ -212,7 +212,7 @@ const cardData = {
       technologiesList.firebase
     ]
   },
-  23: {
+  24: {
     title: "Wizard Game",
     imageSrc: "./resources/img/projects/wizard-game.png",
     shortDescription: "Wizard Game is a turn-based Python terminal game where players choose a heroic class Warrior, Mage, Archer, or Paladin, to battle the Evil Wizard using attacks, healing, and unique special abilities in an epic fantasy showdown.",
@@ -224,7 +224,7 @@ const cardData = {
       technologiesList.python,
     ]
   },
-  22: {
+  23: {
     title: "E-Commerce API MySQL",
     imageSrc: "./resources/img/projects/ecommerce-api-mysql.png",
     shortDescription: "A lightweight e-commerce REST API built with Flask, SQLAlchemy, and Marshmallow that manages Users, Products, and Orders (including a many-to-many Order↔Product relationship). It exposes clean CRUD endpoints, validates input with Marshmallow (email and non-negative pricing), prevents duplicate products per order, and returns consistent JSON with robust error handling.",
@@ -240,7 +240,7 @@ const cardData = {
       technologiesList.marshmallow,
     ]
   },
-  21: {
+  22: {
     title: "Advanced React Shop Firebase CI/CD",
     imageSrc: "./resources/img/projects/advanced-react-shop-firebase-cicd.png",
     shortDescription: "Advanced React Shop is a Firebase-backed e-commerce app built with React + TypeScript that ships through a test-gated CI/CD pipeline. Users can register/login, browse products by category, add items to a cart, and place orders; deployments to Vercel only occur after Jest + React Testing Library tests pass in GitHub Actions.",
@@ -258,6 +258,24 @@ const cardData = {
       technologiesList.reactrouter,
       technologiesList.firebase,
       technologiesList.jest,
+      technologiesList.cicd,
+    ]
+  },
+  21: {
+    title: "Library API",
+    imageSrc: "./resources/img/projects/library-api.png",
+    shortDescription: "Library API is a production-ready REST API for managing a library system. It supports member registration and JWT login, book CRUD with pagination and search, loans that link members to books, and a simple store for items and orders. It ships with Swagger UI docs, caching and rate limiting, unit tests, and a GitHub Actions pipeline that deploys to Render.",
+    longDescription: "Library API is a structured Flask application that delivers a complete backend for library operations. It provides endpoints for member registration, authentication via JWT, and protected profile updates and deletion. The books module includes create, update, delete, full listings with optional pagination, keyword search by title, and a popularity view derived from loan counts. Loans let you associate multiple books to a member in a single transaction and later add or remove books, while the store module handles items and order creation and returns a computed receipt. The project uses SQLAlchemy 2.x models with Flask-SQLAlchemy, Marshmallow for schema validation and serialization, Flask-Limiter for per-route and global rate limits, and Flask-Caching for easy performance boosts. A static Swagger (OpenAPI 2.0) spec powers interactive documentation at /api/docs. Quality is enforced with unittest and a SQLite test configuration, and CI/CD is implemented through GitHub Actions with separate build, test, and deploy jobs that publish to Render using repository secrets. The configuration supports PostgreSQL, MySQL, or SQLite, making it straightforward to run locally for development and scale in production.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "",
+    github: "https://github.com/logandeveloper1000/library-management-api",
+    technologies: [
+      technologiesList.python,
+      technologiesList.flask,
+      technologiesList.sqlalchemy,
+      technologiesList.marshmallow,
+      technologiesList.sqlite,
+      technologiesList.unittest,
       technologiesList.cicd,
     ]
   },
@@ -612,7 +630,6 @@ const cardData = {
     title: "Netflix Clone",
     imageSrc: "./resources/img/projects/netflix-clone.png",
     shortDescription: "This Netflix clone was built with React, JavaScript, CSS, and Firebase. It fetches movie data from the TMDb API and displays it in a responsive, Netflix-style layout.",
-    longDescription: "The Netflix Clone is a fully responsive, front-end web application designed to replicate the core user interface and experience of the popular streaming platform Netflix. This project demonstrates the use of modern web development technologies to create a dynamic, visually engaging, and user-friendly movie browsing experience. Built primarily with React.js, JavaScript, and CSS, the application fetches real-time movie data from an external API and displays it in a grid-based, categorized layout similar to what users would expect from a professional streaming service.\n\nAt its core, the application is powered by React, a JavaScript library for building component-based interfaces. React enables modular development, allowing key elements like the navigation bar, banner section, category rows, and movie posters to be created as independent components. This structure not only keeps the code clean and maintainable but also allows for scalability if additional features or sections are added later.\n\nThe app uses Axios, a promise-based HTTP client, to connect to The Movie Database (TMDb) API. This connection retrieves live data for popular movies, top-rated content, trending shows, and more. Each category is rendered dynamically using React props and state, ensuring the UI updates automatically when new data is loaded. The movie posters are clickable and can expand into previews or trailers, offering interactivity that mimics real-world streaming platforms.\n\nStyling is handled using plain CSS, carefully crafted to emulate the dark, immersive aesthetic of Netflix. Flexbox and grid layouts are used to arrange rows and columns of content in a way that is both responsive and visually consistent across different screen sizes. The home page includes a full-screen banner at the top that features a highlighted movie or show with its title, description, and background image dynamically fetched from the API.\n\nThe application is hosted using Firebase Hosting, a service provided by Google that allows for quick and reliable deployment of web applications. The development build is compiled using tools like Webpack or Vite (depending on the initial setup), and then deployed to the Firebase environment for live access.\n\nAlthough the clone is currently front-end focused, it is structured in a way that could be expanded to include user authentication, watchlists, or streaming functionality through the addition of backend services and protected routes.\n\nIn summary, this Netflix Clone project showcases a professional-grade implementation of React for front-end development, API integration for real-time content, and responsive design principles. It serves as an excellent demonstration of how to build modern web applications that are interactive, data-driven, and visually polished.",
     compatibility: "Mobile Tablet Desktop",
     link: "https://netflix-clone-64f60.web.app/",
     github: "https://github.com/logandeveloper1000/netflix-clone-1",
