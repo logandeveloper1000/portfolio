@@ -172,6 +172,8 @@ const cardData = {
       technologiesList.react,
       technologiesList.reactrouter,
       technologiesList.typescript,
+      technologiesList.nodejs,
+      technologiesList.js,
       technologiesList.firebase,
       technologiesList.html5,
       technologiesList.css3,
