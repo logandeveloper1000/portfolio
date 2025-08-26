@@ -2,7 +2,7 @@ const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 // Total amount of cards allowed
-const totalCards = 27;
+const totalCards = 28;
 
 // How many to load each time
 const cardsPerClick = 6;
@@ -160,6 +160,23 @@ const technologiesList = {
 
 const cardData = {
 
+  28: {
+    title: "Calorie BMR Tracker",
+    imageSrc: "./resources/img/projects/calorie-bmr-tracker.png",
+    shortDescription: "This project is a calorie and BMR tracking web application that helps users monitor their daily nutrition and stay on track with personalized goals. Built with React, TypeScript, and Firebase, it allows secure login with email or Google, real-time meal logging, and automatic calculation of BMR and TDEE based on each user’s profile. The dashboard provides a clear daily summary with progress tracking, while Firestore ensures instant synchronization of data across devices for a seamless and reliable experience.",
+    longDescription: "This project is a calorie and Basal Metabolic Rate (BMR) tracking web application designed to give users an easy way to manage their nutritional intake and monitor progress toward personal goals. Built with React and TypeScript, it uses Firebase Authentication to handle secure login and registration, including both email and Google sign-in, while Firestore provides real-time storage and synchronization of user data. Each user can create a personalized profile that includes weight, height, age, gender, and activity level, which the app uses to automatically calculate BMR and Total Daily Energy Expenditure (TDEE). From these calculations, the app recommends a daily calorie goal that reflects the user’s lifestyle. The dashboard allows users to log meals with name, calorie count, and time, and each entry is stored and displayed in real time. A daily summary card shows total calories consumed, the set goal, and the percentage of completion through a progress bar. All data is updated instantly across devices thanks to Firestore listeners, ensuring that changes are reflected without manual refreshing. The app also includes polished user experience features such as toast notifications, responsive form inputs, and validation with Zod to prevent errors and guide the user smoothly. The structure of the project highlights modern development practices, with authentication managed through a context provider, custom hooks encapsulating Firestore logic, and a clean separation of reusable components, making it both maintainable and production-ready.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://calorie-bmr-tracker.netlify.app/",
+    github: "https://github.com/logandeveloper1000/calorie-bmr-tracker",
+    technologies: [
+      technologiesList.react,
+      technologiesList.reactrouter,
+      technologiesList.typescript,
+      technologiesList.firebase,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  },
   27: {
     title: "Advanced API Development",
     imageSrc: "./resources/img/projects/advance-api-development.png",
@@ -167,7 +184,7 @@ const cardData = {
     longDescription: "This project delivers a complete “Advanced API Development” example for a mechanic service domain using Flask. It implements secure authentication with python-jose JWTs and clear authorization boundaries for two roles: customers, who authenticate to create and manage their own service tickets and view “my tickets,” and mechanics, who authenticate to perform operational tasks like assigning themselves to tickets and attaching inventory parts. Reliability and performance concerns are addressed with Flask-Limiter for both blanket and per-route rate limits, and Flask-Caching for caching expensive reads such as the ranked list of mechanics by tickets completed. The data layer uses SQLAlchemy 2.0 with Flask-Migrate and models real relationships in the domain: customers own tickets, mechanics and tickets are linked through a many-to-many association, and tickets also connect to inventory parts through a second many-to-many association. The customers index endpoint demonstrates modern pagination via db.paginate(select(...)), while ticket management includes targeted endpoints to add or remove mechanics and to append parts to a ticket. The repository ships with a Postman collection that captures tokens automatically and threads IDs between requests, making it easy to run an end-to-end demo of authentication, ticket creation, mechanic assignment, part attachment, cached reads, and protected routes all running locally with a simple SQLite database and a .env configuration.",
     compatibility: "Mobile Tablet Desktop",
     link: "",
-    github: "https://github.com/logandeveloper1000/advanced-api-development/tree/main",
+    github: "https://github.com/logandeveloper1000/advanced-api-development/",
     technologies: [
       technologiesList.python,
       technologiesList.flask,
