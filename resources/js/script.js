@@ -1,3 +1,4 @@
+// SCRIPT.JS
 const cardGrid = document.getElementById('card-grid');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
@@ -40,6 +41,11 @@ const technologiesList = {
     src: "./resources/img/technologies/reactjs.png",
     title: "React JS",
     description: "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, especially single-page applications. It allows developers to create reusable UI components that efficiently update and render when data changes. React follows a component-based architecture, making code more modular, maintainable, and easier to scale.\n\nOne of Reacts key features is the virtual DOM, which improves performance by minimizing direct interactions with the real DOM. When the state of a component changes, React updates the virtual DOM first, compares it to the previous version, and then applies only the necessary changes to the actual DOM.\n\nReact uses JSX, a syntax extension that allows developers to write HTML-like code within JavaScript, making the code more readable and easier to work with. It also supports powerful concepts like props and state for managing data, and hooks for handling side effects and lifecycle events in functional components.\n\nReact can be used in combination with other tools and libraries such as React Router for navigation, Redux for state management, and Axios or Fetch for API calls. It is also commonly used with back-end services like Firebase or Node.js in full-stack development."
+  },
+  reactnative: {
+    src: "./resources/img/technologies/reactnative.png",
+    title: "React Native",
+    description: "React Native is a popular open-source framework created by Meta for building high-performance mobile applications using JavaScript and React. It allows developers to create truly native iOS and Android apps using a single codebase, significantly reducing development time while maintaining excellent performance.\n\nUnlike traditional hybrid frameworks that rely on WebViews, React Native renders real native UI components, resulting in smoother animations and a more natural user experience. Its core architecture combines JavaScript logic with native APIs, giving developers access to features such as the camera, haptics, file system, push notifications, and more through a wide ecosystem of libraries.\n\nReact Native uses the same component-based structure as React, supporting concepts like props, state, and hooks, which makes it easy for React developers to transition into mobile development. It also supports fast-refresh for instant UI updates during development, improving productivity and iteration speed.\n\nReact Native integrates seamlessly with backend services such as Firebase, Node.js, and cloud APIs, and it can be paired with tools like Expo to simplify development, testing, and deployment. With its strong community, large ecosystem, and cross-platform capabilities, React Native is one of the most widely used solutions for modern mobile app development."
   },
   reactredux: {
     src: "./resources/img/technologies/react-redux.png",
@@ -156,10 +162,64 @@ const technologiesList = {
     title: "Unittest",
     description: "Unittest is Python’s built-in xUnit-style testing framework for writing repeatable, automated tests. You group related checks into TestCase classes with optional setUp and tearDown methods to create and clean up fixtures, then use rich assertion methods to verify behavior. It supports test discovery, test suites, skipping and expected-failure annotations, subtests for parameterized cases, and integrates tightly with unittest.mock for isolating dependencies. Tests run from the command line with python -m unittest and produce machine-readable exit codes that fit neatly into CI pipelines. In a Flask project, unittest lets you spin up an app in testing mode, hit routes through the test client, and verify both positive and negative paths against an in-memory database, helping prevent regressions and documenting expected behavior."
   },
+  expo: {
+    src: "./resources/img/technologies/expo.png",
+    title: "Expo",
+    description: "Expo is a powerful open-source framework and toolchain built on top of React Native that simplifies the process of developing, testing, and deploying mobile applications. It provides a managed workflow with preconfigured native modules such as camera, haptics, location, sensors, file system, notifications, and authentication allowing developers to build rich mobile experiences without needing to write native Objective-C or Java code.\n\nExpo includes an ecosystem of tools like the Expo CLI, EAS Build, and EAS Submit, which streamline building and publishing apps for both iOS and Android. Developers benefit from fast refresh, an optimized development environment, and consistent APIs across platforms. Expo projects can start quickly with minimal setup, scale into more complex apps using the Bare Workflow, and easily integrate with cloud services and third-party packages.\n\nWith its reliability, developer-friendly workflow, and strong community support, Expo is one of the most efficient ways to build modern cross-platform mobile apps."
+  },
+  expogo: {
+    src: "./resources/img/technologies/expo-go.png",
+    title: "Expo Go",
+    description: "Expo Go is a companion app that enables developers to instantly preview and test React Native applications on real devices without needing to build native binaries. By scanning a QR code or entering a project URL, the app loads your JavaScript bundle and runs it directly, providing a fast and frictionless development workflow.\n\nExpo Go includes many of Expo’s built-in modules, such as camera access, push notifications, Haptics, SecureStore, and more, allowing developers to test most features in real time as they code. It supports live reloading and hot refresh, making UI adjustments and feature iteration extremely efficient.\n\nBecause Expo Go runs inside a sandboxed environment, some custom native modules require a standalone build, but for the majority of development tasks, Expo Go dramatically speeds up the process of testing and validating mobile app functionality on both iOS and Android devices."
+  },
+
+  /*/////////////////////////////////PLATFORMS/////////////////////////////////*/
+  apple: {
+    src: "./resources/img/technologies/apple.png",
+    title: "Apple",
+    description: "Apple provides a powerful ecosystem for developing and distributing high-quality iOS, iPadOS, macOS, watchOS, and tvOS applications. Through tools like Xcode and Swift, developers can build native apps with excellent performance, secure data handling, and polished user interfaces that follow Apple’s Human Interface Guidelines. Apple’s developer ecosystem includes robust APIs such as Core Data, CloudKit, ARKit, and HealthKit, enabling advanced features like augmented reality, biometric authentication, and cloud synchronization.\n\nApple’s App Store serves as the primary marketplace for iOS apps, offering global distribution, review processes for quality assurance, and built-in tools for subscriptions, in-app purchases, analytics, and TestFlight testing. With a strong focus on privacy, security, and user experience, the Apple ecosystem empowers developers to create reliable, intuitive, and modern mobile applications."
+  },
+  applestore: {
+    src: "./resources/img/technologies/apple-store.png",
+    title: "App Store",
+    description: "The Apple App Store is Apple’s official platform for distributing iOS, iPadOS, macOS, watchOS, and tvOS applications. It provides developers with a global marketplace, secure payment processing, subscription management, and tools to reach millions of users worldwide. The App Store review process ensures that apps meet strict standards for security, performance, and user privacy, helping maintain a high-quality environment for both developers and customers.\n\nDevelopers manage submissions through App Store Connect, where they can upload builds, configure metadata, manage in-app purchases, set pricing, analyze performance metrics, and invite testers through TestFlight. With built-in discovery features, curated categories, and editorial highlights, the App Store remains one of the leading distribution platforms for mobile applications."
+  },
+  android: {
+    src: "./resources/img/technologies/android.png",
+    title: "Android",
+    description: "Android is the world’s most widely used mobile operating system, developed by Google and built on a flexible open-source architecture. It allows developers to create powerful mobile applications using languages such as Kotlin, Java, or cross-platform frameworks like React Native and Flutter. Android’s open ecosystem provides extensive APIs for working with sensors, location, storage, notifications, background services, and hardware integrations.\n\nAndroid Studio, Google’s official IDE, offers advanced tools including emulators, profiling, debugging, Jetpack libraries, and UI layout editors to streamline app development. Because Android powers a diverse range of devices from smartphones and tablets to TVs, wearables, and automotive displays developers can reach a large global audience with rich, customizable mobile experiences."
+  },
+  googleplay: {
+    src: "./resources/img/technologies/googleplay.png",
+    title: "Google Play",
+    description: "Google Play is Google’s official digital distribution platform for Android applications, offering developers a global marketplace to publish and monetize their apps. Through the Google Play Console, developers can manage releases, track performance, run closed or open testing tracks, integrate subscriptions, handle in-app purchases, and access extensive analytics to understand user behavior.\n\nGoogle Play Protect automatically scans apps for security issues, ensuring a safe environment for users. The platform supports flexible pricing, promotional codes, staged rollouts, A/B testing, and detailed crash and ANR reports. With its powerful ecosystem, automated tools, and vast Android user base, Google Play remains the primary distribution channel for Android applications worldwide."
+  },
 };
 
 const cardData = {
-
+    29: {
+    title: "Pet Foster App (iOS & Android)",
+    imageSrc: "./resources/img/projects/pet-foster-app.png",
+    shortDescription: "A full-featured mobile application built with React Native, Expo, and Firebase that connects animal shelters with fosters. The app supports real-time pet management, task assignments, confirmations, alerts, and two-way messaging, all synced instantly across devices. Shelters can register pets, track foster history, and manage subscriptions, while fosters receive organized dashboards, notifications, and daily task workflows. Designed for reliability, scalability, and a smooth user experience, it streamlines the entire foster and shelter communication process.",
+    longDescription: "The Pet Foster App is a complete mobile platform designed to streamline communication and task management between animal shelters and volunteer fosters. Developed using React Native, Firebase Authentication, Firestore, and Firebase Cloud Functions, the app enables shelters to register pets, assign fosters, manage daily tasks, and track pet history, while fosters can view assigned pets, confirm tasks, receive alerts, and message shelters in real time. The interface supports dynamic dashboards for both shelters and fosters, including pet details, history logs, graphs of daily activity, and a built-in chat system with read receipts. Firestore listeners ensure instant synchronization across devices, while Cloud Functions handle critical logic such as task confirmations, alerts, subscription management, pet assignment, and data cleanup during deletions. The app includes subscription tiers for shelters, allowing features such as unlimited pets with the Hero Account. Custom hooks, modular Firestore queries, and carefully structured components keep the codebase maintainable and scalable. Profile management includes image uploads, state selection modals, email verification flows, and secure updating of user data. Altogether, the app delivers a polished, production-ready experience built entirely with modern mobile development practices.",
+    compatibility: "Mobile Tablet",
+    link: "",
+    technologies: [
+      technologiesList.apple,
+      technologiesList.applestore,
+      technologiesList.android,
+      technologiesList.googleplay,
+      technologiesList.reactnative,
+      technologiesList.expo,
+      technologiesList.expogo,
+      technologiesList.typescript,
+      technologiesList.firebase,
+      technologiesList.nodejs,
+      technologiesList.js,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  }, 
   28: {
     title: "Calorie BMR Tracker",
     imageSrc: "./resources/img/projects/calorie-bmr-tracker.png",
