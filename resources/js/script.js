@@ -172,6 +172,17 @@ const technologiesList = {
     title: "Expo Go",
     description: "Expo Go is a companion app that enables developers to instantly preview and test React Native applications on real devices without needing to build native binaries. By scanning a QR code or entering a project URL, the app loads your JavaScript bundle and runs it directly, providing a fast and frictionless development workflow.\n\nExpo Go includes many of Expo’s built-in modules, such as camera access, push notifications, Haptics, SecureStore, and more, allowing developers to test most features in real time as they code. It supports live reloading and hot refresh, making UI adjustments and feature iteration extremely efficient.\n\nBecause Expo Go runs inside a sandboxed environment, some custom native modules require a standalone build, but for the majority of development tasks, Expo Go dramatically speeds up the process of testing and validating mobile app functionality on both iOS and Android devices."
   },
+  revenuecat: {
+    src: "./resources/img/technologies/revenuecat.png",
+    title: "RevenueCat",
+    description: "RevenueCat is a subscription management platform designed to simplify the implementation of in-app purchases and recurring subscriptions for mobile applications. It provides developers with a unified system for handling purchases across platforms such as iOS and Android, reducing the complexity of working directly with Apple App Store and Google Play billing systems.\n\nOne of RevenueCat’s main advantages is its ability to manage subscription states, free trials, renewals, cancellations, and entitlements through a centralized API. Developers can securely validate receipts, track subscription status in real time, and synchronize purchase data across devices without building a custom backend infrastructure.\n\nRevenueCat also includes analytics, customer management tools, webhook integrations, and support for paywalls and offerings, making it easier to optimize subscription-based applications. It integrates well with frameworks such as React Native, Expo, Firebase, and backend services, and is widely used in SaaS and mobile subscription applications to streamline monetization workflows."
+  },
+
+  stripe: {
+    src: "./resources/img/technologies/stripe.png",
+    title: "Stripe",
+    description: "Stripe is a widely used online payment processing platform that enables businesses and developers to securely accept payments over the internet. It provides powerful APIs and developer tools for handling credit cards, digital wallets, subscriptions, invoices, and marketplace transactions across web and mobile applications.\n\nStripe supports a wide range of payment methods including Apple Pay, Google Pay, debit and credit cards, and recurring billing systems for subscription-based products. It also includes advanced features such as payment intents, fraud prevention through Stripe Radar, customer billing portals, refunds, payout management, and webhook-based event handling.\n\nDevelopers commonly integrate Stripe using SDKs and APIs in technologies such as React, React Native, Node.js, Firebase Cloud Functions, and mobile frameworks like Expo. Stripe is known for its strong security standards, detailed documentation, scalability, and flexible developer experience, making it one of the most popular payment platforms for modern software applications and e-commerce systems."
+  },
 
   /*/////////////////////////////////PLATFORMS/////////////////////////////////*/
   apple: {
@@ -197,13 +208,96 @@ const technologiesList = {
 };
 
 const cardData = {
-    29: {
-    title: "Pet Foster App (iOS & Android)",
+  33: {
+    title: "Test Myself AI iOS",
+    imageSrc: "./resources/img/projects/test-myself-ai.png",
+    shortDescription: "Test Myself AI is an AI-powered education mobile application built with React Native, Expo, Firebase, OpenAI, and RevenueCat. The app helps users generate personalized practice tests, answer questions with instant AI feedback, track grades and progress, restart tests, and use subscription-based Pro access with daily AI request limits.",
+    longDescription: "Test Myself AI is a production-ready iOS education application designed to help users study smarter by generating personalized practice tests with artificial intelligence. Built with React Native, Expo Router, Firebase Authentication, Firestore, Firebase Cloud Functions, OpenAI, and RevenueCat, the app allows users to create accounts, generate AI-powered tests by subject, language, difficulty, and question count, answer multiple-choice and text questions, receive instant AI grading feedback, and track test progress, scores, and completion status. The backend uses Firebase Cloud Functions to securely handle AI test generation, answer validation, grading logic, free trial limits, total AI request limits, and Pro daily request limits. Firestore stores user accounts, generated tests, questions, answers, progress, grades, subscription status, and usage counters with real-time updates across the app. The subscription system is integrated with Apple In-App Purchases through RevenueCat, supporting Pro Account access, restore purchases, auto-renewing subscription handling, and App Store legal requirements such as Terms of Use and Privacy Policy links. The app also includes account management, password reset, email updates, account deletion, test renaming, test deletion, character-limited inputs, polished mobile UI components, and App Store-ready subscription metadata. Test Myself AI demonstrates full-stack mobile development, AI integration, serverless backend logic, real-time cloud data syncing, subscription monetization, and production deployment to the Apple App Store.",
+    compatibility: "Mobile Tablet",
+    link: "",
+    github: "",
+    technologies: [
+      technologiesList.apple,
+      technologiesList.applestore,
+      technologiesList.revenuecat,
+      technologiesList.reactnative,
+      technologiesList.expo,
+      technologiesList.firebase,
+      technologiesList.nodejs,
+      technologiesList.js,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  },
+  32: {
+    title: "Shirts Code App iOS",
+    imageSrc: "./resources/img/projects/shirts-code-app.png",
+    shortDescription: "Shirts Code App is a production-ready iOS shopping application built with React Native, Expo, Firebase, Stripe, and Firestore. The app lets users buy shirts with unique QR codes, complete secure checkout, manage purchased shirts, update QR redirect links, and view scan analytics through a personalized dashboard.",
+    longDescription: "Shirts Code App is a production-ready iOS e-commerce application that combines custom apparel, QR code technology, secure payments, and user-owned redirect management. Built with React Native, Expo Router, Firebase Authentication, Firestore, Firebase Cloud Functions, Firebase Storage, Stripe, and Netlify for the web redirect experience, the app allows customers to browse shirts by category and type, view product details, add items to a cart, enter a U.S. shipping address, calculate shipping, and complete secure Stripe checkout. After purchase, each shirt receives a unique Shirt ID and QR code that connects to a redirect link controlled by the customer. Users can log in to their dashboard, view purchased shirts, copy shirt IDs, update QR redirect links, and access analytics for QR scans. The backend uses Firebase Cloud Functions to create Stripe payment intents, process webhooks, generate order records, create individual shirt records, store redirect links, and sync purchased items to each user account. The app also includes an admin panel for managing products, orders, tracking numbers, delivery statuses, users, and order items. A lightweight web redirect page handles QR scans directly through Firestore, records analytics such as device, browser, referrer, and user agent, then redirects visitors without loading the full React app. Shirts Code App demonstrates full-stack mobile and web development, secure checkout integration, serverless backend automation, QR redirect infrastructure, admin tooling, App Store deployment, and production-ready Firebase architecture.",
+    compatibility: "Mobile Tablet Desktop",
+    link: "https://apps.apple.com/us/app/shirts-code/id6764700760",
+    github: "",
+    technologies: [
+      technologiesList.apple,
+      technologiesList.applestore,
+      technologiesList.reactnative,
+      technologiesList.expo,
+      technologiesList.firebase,
+      technologiesList.nodejs,
+      technologiesList.stripe,
+      technologiesList.js,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  },
+  31: {
+    title: "Connection Accounting App iOS",
+    imageSrc: "./resources/img/projects/connection-accounting-app.png",
+    shortDescription: "Connection Accounting App is a private iOS business management application built with React Native, Expo, Firebase, Firestore, Cloud Functions, and Firebase Storage. The app helps Connection Accounting manage clients, secure file uploads, document downloads, service records, and private admin-client messaging through a controlled login-based system.",
+    longDescription: "Connection Accounting App is a production-ready private iOS application designed for Connection Accounting and its authorized clients. Built with React Native, Expo, Firebase Authentication, Firestore, Firebase Cloud Functions, and Firebase Storage, the app provides a secure client portal where admins can manage client accounts, organize client folders, upload and download sensitive files, exchange messages, and track service-related records. The system uses role-based access control for admin and client users, with Firestore security rules and Cloud Functions protecting file operations, account management, messaging, and storage access. Admins can create client accounts, manage folders, upload documents, rename or delete files, monitor storage usage, and communicate with clients in real time. Clients can log in securely, view assigned files, download documents, send messages, and access account-specific information. The app also includes password reset support, legal Terms and Privacy links, protected routing, App Store unlisted distribution, and a responsive mobile UI optimized for iPhone and iPad. Connection Accounting App demonstrates full-stack mobile development, secure cloud architecture, private business app distribution, role-based permissions, file storage workflows, and real-time communication using modern Expo and Firebase technologies.",
+    compatibility: "Mobile Tablet",
+    link: "https://apps.apple.com/app/id6763819367",
+    github: "",
+    technologies: [
+      technologiesList.apple,
+      technologiesList.applestore,
+      technologiesList.reactnative,
+      technologiesList.expo,
+      technologiesList.firebase,
+      technologiesList.nodejs,
+      technologiesList.js,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  },
+  30: {
+    title: "Task AI App iOS",
+    imageSrc: "./resources/img/projects/task-ai-app.png",
+    shortDescription: "Task AI App is a productivity mobile application built with React Native, Expo, Firebase, OpenAI, and RevenueCat. The app helps users create organized task lists, generate AI-powered daily plans, manage schedules, track progress, and use subscription-based Pro access with daily AI request limits. It includes authentication, real-time Firestore syncing, legal agreement tracking, account management, and App Store subscription integration.",
+    longDescription: "Task AI App is a production-ready iOS productivity application designed to help users plan, organize, and complete tasks more efficiently with artificial intelligence. Built with React Native, Expo, Firebase Authentication, Firestore, Firebase Cloud Functions, OpenAI, and RevenueCat, the app allows users to create accounts, manage task lists, add daily schedules, track completion progress, and generate structured one-day task plans through an AI chat interface. The system includes free trial usage limits, Pro subscription access, daily AI request tracking, and real-time Firestore synchronization across the app. Users can manage their profile, update account information, reset passwords, review subscription status, and accept updated Terms and Privacy Policy agreements. The AI workflow is connected to Firebase Cloud Functions, where usage limits, trial expiration, prompt handling, and task generation are securely managed. The app also includes App Store subscription support through RevenueCat, legal links, account deletion, support email handling, and polished dark-mode mobile UI components. Task AI App demonstrates full-stack mobile development, cloud backend logic, AI integration, subscription monetization, and production deployment to the Apple App Store.",
+    compatibility: "Mobile Tablet",
+    link: "https://apps.apple.com/us/app/task-ai-app/id6762208718",
+    github: "",
+    technologies: [
+      technologiesList.apple,
+      technologiesList.applestore,
+      technologiesList.revenuecat,
+      technologiesList.reactnative,
+      technologiesList.expo,
+      technologiesList.firebase,
+      technologiesList.nodejs,
+      technologiesList.js,
+      technologiesList.html5,
+      technologiesList.css3,
+    ]
+  },
+  29: {
+    title: "Pet Foster App iOS",
     imageSrc: "./resources/img/projects/pet-foster-app.png",
     shortDescription: "A full-featured mobile application built with React Native, Expo, and Firebase that connects animal shelters with fosters. The app supports real-time pet management, task assignments, confirmations, alerts, and two-way messaging, all synced instantly across devices. Shelters can register pets, track foster history, and manage subscriptions, while fosters receive organized dashboards, notifications, and daily task workflows. Designed for reliability, scalability, and a smooth user experience, it streamlines the entire foster and shelter communication process.",
     longDescription: "The Pet Foster App is a complete mobile platform designed to streamline communication and task management between animal shelters and volunteer fosters. Developed using React Native, Firebase Authentication, Firestore, and Firebase Cloud Functions, the app enables shelters to register pets, assign fosters, manage daily tasks, and track pet history, while fosters can view assigned pets, confirm tasks, receive alerts, and message shelters in real time. The interface supports dynamic dashboards for both shelters and fosters, including pet details, history logs, graphs of daily activity, and a built-in chat system with read receipts. Firestore listeners ensure instant synchronization across devices, while Cloud Functions handle critical logic such as task confirmations, alerts, subscription management, pet assignment, and data cleanup during deletions. The app includes subscription tiers for shelters, allowing features such as unlimited pets with the Hero Account. Custom hooks, modular Firestore queries, and carefully structured components keep the codebase maintainable and scalable. Profile management includes image uploads, state selection modals, email verification flows, and secure updating of user data. Altogether, the app delivers a polished, production-ready experience built entirely with modern mobile development practices. Website: petfoster-app.com",
     compatibility: "Mobile Tablet",
-    link: "https://petfoster-app.com/",
+    link: "https://apps.apple.com/us/app/pet-foster-app/id6748146542",
     technologies: [
       technologiesList.apple,
       technologiesList.applestore,
